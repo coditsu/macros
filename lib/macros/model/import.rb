@@ -21,7 +21,7 @@ module Macros
         resources = options[@key]
 
         attributes = resources.first&.attributes&.keys || []
-        nullify = resources.first&.id.empty?
+        nullify = resources.first&.id.to_s.empty?
         attributes.delete('id') if nullify
 
         @klass.import(
