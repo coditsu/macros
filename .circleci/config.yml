@@ -1,0 +1,28 @@
+version: 2
+
+jobs:
+  coditsu:
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          docker create -v /sources --name sources alpine:3.4 /bin/true
+          docker cp ./ sources:/sources
+          docker run --volumes-from sources coditsu/build-runner:latest
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - coditsu
+
+  nightly:
+    triggers:
+      - schedule:
+          cron: '0 0 * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - coditsu
