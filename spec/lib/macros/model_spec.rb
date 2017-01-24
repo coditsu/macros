@@ -9,9 +9,11 @@ RSpec.describe Macros::Model do
   end
 
   describe '#Find()' do
-    it 'proxy to trbr model find' do
-      expect(described_class::Find(scope)[1]).to eq Trailblazer::Operation::Model(scope)[1]
-    end
+    it { expect(described_class::Find(scope)).to be_a described_class::Find }
+  end
+
+  describe '#Query()' do
+    it { expect(described_class::Query(scope)).to be_a described_class::Query }
   end
 
   describe '#Destroy()' do

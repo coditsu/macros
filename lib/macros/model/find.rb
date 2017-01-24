@@ -5,14 +5,14 @@ module Macros
     # @example
     #   step Macros::Model::Find(Repository)
     class Find < Base
-      # @param scope [Class, ActiveRecord::Relation] class or scope on which we will search
       def initialize(scope, action = :find_by!)
-        self.args = [scope, action]
+        @scope = scope
+        @action = action
       end
 
       # Builds a step
-      def call
-        Trailblazer::Operation::Model(*args)
+      def call(options, *args)
+        Macros::Model::Query.new(@scope, @action).call(options, *args)
       end
     end
   end
