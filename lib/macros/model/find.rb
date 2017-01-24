@@ -6,7 +6,7 @@ module Macros
     #   step Macros::Model::Find(Repository)
     class Find < Base
       # @param scope [Class, ActiveRecord::Relation] class or scope on which we will search
-      def initialize(scope, action = :find_by)
+      def initialize(scope, action = :find_by!)
         self.args = [scope, action]
       end
 

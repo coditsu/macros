@@ -6,7 +6,7 @@ RSpec.describe Macros::Model::Find do
 
   it 'expect to delegate to trbr contract build' do
     expect(Trailblazer::Operation).to receive(:Model)
-      .with(scope, :find_by)
+      .with(scope, :find_by!)
 
     find_step.call
   end
