@@ -7,14 +7,14 @@ RSpec.describe Macros::Model::Find do
 
   let(:scope) do
     Class.new do
-      def self.find_by!(*args); end
+      def self.find(*args); end
 
       self
     end
   end
 
   it 'expect to find and assign to model' do
-    expect(scope).to receive(:find_by!).with(id: id_value).and_return(found_instance)
+    expect(scope).to receive(:find).with(id_value).and_return(found_instance)
     find_step.call(options, params: { id: id_value })
     expect(options['model']).to eq found_instance
   end

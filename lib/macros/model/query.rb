@@ -2,7 +2,7 @@
 module Macros
   class Model
     class Query < Base
-      def initialize(scope, action = :find_by!, name: 'model', search_key: :id, params_key: :id)
+      def initialize(scope, action = :find, name: 'model', search_key: :id, params_key: :id)
         @scope = scope
         @action = action
         @name = name
@@ -11,7 +11,8 @@ module Macros
       end
 
       def call(options, params:, **)
-        options[@name] = @scope.public_send(@action, @search_key => params[@params_key])
+        args = @action == :find ? params[@params_key] : { @search_key => params[@params_key] }
+        options[@name] = @scope.public_send(@action, args)
       end
     end
   end

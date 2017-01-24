@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    macros (0.10.2)
+    macros (0.10.3)
       activesupport
       require_all
       trailblazer
@@ -55,12 +55,11 @@ GEM
     simplecov-html (0.10.0)
     thread_safe (0.3.5)
     timecop (0.8.1)
-    trailblazer (2.0.1)
+    trailblazer (2.0.3)
       declarative
       reform (>= 2.2.0, < 3.0.0)
-      trailblazer-operation (>= 0.0.10, < 0.1.0)
-      uber (>= 0.1.0, < 0.2.0)
-    trailblazer-operation (0.0.11)
+      trailblazer-operation (>= 0.0.12, < 0.1.0)
+    trailblazer-operation (0.0.12)
       declarative
       pipetree (>= 0.1.1, < 0.2.0)
       uber
