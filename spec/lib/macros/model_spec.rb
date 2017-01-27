@@ -12,10 +12,6 @@ RSpec.describe Macros::Model do
     it { expect(described_class::Find(scope)).to be_a described_class::Find }
   end
 
-  describe '#Query()' do
-    it { expect(described_class::Query(scope)).to be_a described_class::Query }
-  end
-
   describe '#Destroy()' do
     it { expect(described_class::Destroy()).to be_a described_class::Destroy }
   end

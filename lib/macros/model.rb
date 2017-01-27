@@ -5,7 +5,7 @@ module Macros
     register :build, proxy: true
     register :find
     register :import
-    register :query
     register :destroy
+    register :persist
   end
 end
