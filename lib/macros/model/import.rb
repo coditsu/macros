@@ -17,7 +17,7 @@ module Macros
       end
 
       # Performs a batch insert of data into table
-      # @param [Trailblazer::Operation::Option] trbr options hash
+      # @param options [Trailblazer::Operation::Option] trbr options hash
       def call(options, **)
         resources = options[@key]
 

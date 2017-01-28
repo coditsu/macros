@@ -13,7 +13,7 @@ module Macros
       # @param scope [Class, ActiveRecord::Relation] class or AR relation on which we search
       # @param action [Symbol] action/method  name that we want to use to perform search on scope
       # @param name [String] name under which we will assign results in the options hash
-      # @param search_key [Symbol] attribute name that will be searched on
+      # @param search_attribute [Symbol] attribute name that will be searched on
       # @return [Macros::Model::Find] find macro instance
       #
       # @example Commit search on repository_id
@@ -27,8 +27,8 @@ module Macros
       end
 
       # Performs a search find given options
-      # @param [Trailblazer::Operation::Option] trbr options hash
-      # @param [Hash] hash with input parameters
+      # @param options [Trailblazer::Operation::Option] trbr options hash
+      # @param params [Hash] hash with input parameters
       def call(options, params:, **)
         # :find works differently that any other AR search as it does not take attr name
         args = @action == :find ? params[@params_key] : { @search_attribute => params[@params_key] }

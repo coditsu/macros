@@ -14,7 +14,7 @@ module Macros
       end
 
       # Persists a given model
-      # @param _options [Trailblazer::Operation::Option] options accumulator
+      # @param options [Trailblazer::Operation::Option] options accumulator
       # @param model [Object] object that we want to persist
       def call(options, model:, **)
         options[@name].public_send(@method)

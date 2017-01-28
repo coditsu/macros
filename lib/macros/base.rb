@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 module Macros
+  # Base class for all the Trbr step macros
   class Base
     include Uber::Callable
 
