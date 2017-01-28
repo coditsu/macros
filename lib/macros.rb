@@ -5,6 +5,7 @@
   active_support/inflector
 ).each { |lib| require lib }
 
+# Trailblazer shared macros used across multiple apps
 module Macros
   class << self
     # @return [String] root path to this gem
