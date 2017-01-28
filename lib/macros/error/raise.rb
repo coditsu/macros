@@ -13,7 +13,7 @@ module Macros
 
       # @param options [Trailblazer::Operation::Result] operation result
       # @param args Any additional arguments that operation will pass
-      # @raise [Errors::OperationFailure] raised when anything went wrong
+      # @raise [Exception] any exception that we've set to be raised in the initializer
       def call(options, *args)
         raise @error_class, [
           options['current_operation'],

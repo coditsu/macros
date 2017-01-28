@@ -9,6 +9,7 @@ module Macros
       # @param key [String, Symbol] options key where the data that we want to import is
       # @param validate [Boolean] should we validate this data - since we expect to import
       #   data validated by contracts, by default it is off (no validations on models)
+      # @return [Macros::Model::Import] import step with appropriate options
       def initialize(klass, key: 'model', validate: false)
         @key = key
         @klass = klass

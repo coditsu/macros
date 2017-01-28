@@ -3,6 +3,8 @@ module Macros
   class Params
     # Remap step for remapping params in operations
     class Remap < Base
+      # @param remapper_class [Class] remapper class that we want to use to remap parameters
+      # @return [Macros::Params::Remap] remapper step instance
       def initialize(remapper_class)
         @remapper_class = remapper_class
       end

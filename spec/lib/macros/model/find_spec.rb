@@ -52,9 +52,9 @@ RSpec.describe Macros::Model::Find do
   end
 
   context 'custom search key' do
-    subject(:query_step) { described_class.new(scope, search_key: search_key) }
+    subject(:query_step) { described_class.new(scope, search_attribute: search_attribute) }
 
-    let(:search_key) { rand }
+    let(:search_attribute) { rand }
     let(:params) { { params: { id: search_value } } }
 
     it 'expect to use custom search key' do

@@ -19,4 +19,8 @@ RSpec.describe Macros::Model do
   describe '#Import()' do
     it { expect(described_class::Import(scope)).to be_a described_class::Import }
   end
+
+  describe '#Persist()' do
+    it { expect(described_class::Persist()).to be_a described_class::Persist }
+  end
 end
