@@ -3,6 +3,7 @@ RSpec.describe Macros::Model::Persist do
   let(:scope) do
     Class.new do
       def save!; end
+
       def save; end
 
       self

@@ -7,6 +7,7 @@ RSpec.describe Macros::Model::Find do
   let(:scope) do
     Class.new do
       def self.find(*_args); end
+
       def self.find_by(*_args); end
 
       self
