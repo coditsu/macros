@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-RSpec.describe Macros::Model::Assign do
+RSpec.describe Macros::Option::Assign do
   let(:klass) { Class.new }
   let(:options) { {} }
 

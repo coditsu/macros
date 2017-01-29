@@ -7,6 +7,5 @@ module Macros
     register :import
     register :destroy
     register :persist
-    register :assign
   end
 end
