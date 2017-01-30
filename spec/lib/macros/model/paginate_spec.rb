@@ -2,7 +2,7 @@
 RSpec.describe Macros::Model::Paginate do
   let(:klass) do
     Class.new do
-      def self.page(page_number); end
+      def self.page(_page_number); end
 
       self
     end
@@ -12,7 +12,7 @@ RSpec.describe Macros::Model::Paginate do
   let(:page) { rand }
 
   context 'when we want to paginate model' do
-    subject(:paginate_step) { described_class.new() }
+    subject(:paginate_step) { described_class.new }
     let(:options) { { 'model' => klass } }
 
     it 'expect to retrieve a given page' do

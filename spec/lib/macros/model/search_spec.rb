@@ -2,7 +2,7 @@
 RSpec.describe Macros::Model::Search do
   let(:klass) do
     Class.new do
-      def self.search(current_search); end
+      def self.search(_current_search); end
 
       self
     end
@@ -13,7 +13,7 @@ RSpec.describe Macros::Model::Search do
   let(:search_result) { [rand] }
 
   context 'when we want to search model' do
-    subject(:paginate_step) { described_class.new() }
+    subject(:paginate_step) { described_class.new }
     let(:options) { { 'model' => klass } }
 
     it 'expect to assign a model search' do
