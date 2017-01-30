@@ -9,5 +9,6 @@ module Macros
     register :find
     register :import
     register :persist
+    register :search
   end
 end
