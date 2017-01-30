@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    macros (0.13.0)
+    macros (0.15.0)
       activesupport
       require_all
       trailblazer
