@@ -8,6 +8,7 @@ module Macros
     register :fetch
     register :find
     register :import
+    register :paginate
     register :persist
     register :search
   end
