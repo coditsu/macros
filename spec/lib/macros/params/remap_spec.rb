@@ -4,8 +4,7 @@ RSpec.describe Macros::Params::Remap do
 
   let(:mapper_class) do
     Class.new do
-      def self.call
-      end
+      def self.call; end
 
       self
     end
