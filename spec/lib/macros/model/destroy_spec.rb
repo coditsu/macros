@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Destroy do
   subject(:destroy_step) { described_class.new }
 

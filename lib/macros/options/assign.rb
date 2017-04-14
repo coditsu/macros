@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   # Macros for manipulating options
   class Option

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Paginate do
   let(:klass) do
     Class.new do
@@ -13,6 +14,7 @@ RSpec.describe Macros::Model::Paginate do
 
   context 'when we want to paginate model' do
     subject(:paginate_step) { described_class.new }
+
     let(:options) { { 'model' => klass } }
 
     it 'expect to retrieve a given page' do
@@ -24,6 +26,7 @@ RSpec.describe Macros::Model::Paginate do
 
   context 'when we want to paginate a different options key resource' do
     subject(:paginate_step) { described_class.new(name: 'different') }
+
     let(:options) { { 'different' => klass } }
 
     it 'expect to retrieve a given page' do

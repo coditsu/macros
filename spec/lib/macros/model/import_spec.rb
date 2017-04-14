@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Import do
   subject(:import_step) { described_class.new(klass, key: key, validate: validate) }
 

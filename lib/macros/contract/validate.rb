@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   # Contract related steps macros namespace
   class Contract

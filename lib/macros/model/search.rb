@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Searches based on current_search data and overwrites our model/resource

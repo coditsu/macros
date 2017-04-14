@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Contract do
   describe '#Build()' do
     it 'proxy to trbr contract build' do

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Contract
     # @example Set contract class and build a new contract

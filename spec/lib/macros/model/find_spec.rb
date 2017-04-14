@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Find do
   let(:options) { {} }
   let(:found_instance) { scope.new }

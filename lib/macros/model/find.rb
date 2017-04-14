@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Searches on a given scope and assigns result to an options hash

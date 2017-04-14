@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Base do
   subject(:container) { described_class.new(*args) }
 

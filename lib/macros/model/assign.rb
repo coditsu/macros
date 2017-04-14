@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Assigns a given attribute to a resource that is under a to key

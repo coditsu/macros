@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Params do
   describe '#Remap()' do
     let(:remapper_class) { Class.new }

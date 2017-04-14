@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Persist do
   let(:scope) do
     Class.new do

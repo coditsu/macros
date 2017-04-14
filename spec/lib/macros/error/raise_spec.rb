@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Error::Raise do
   subject(:raise_step) { described_class.new(error_class) }
 

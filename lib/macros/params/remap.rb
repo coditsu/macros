@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Params
     # Remap step for remapping params in operations

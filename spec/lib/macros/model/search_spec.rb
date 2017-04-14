@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Model::Search do
   let(:klass) do
     Class.new do
@@ -14,6 +15,7 @@ RSpec.describe Macros::Model::Search do
 
   context 'when we want to search model' do
     subject(:paginate_step) { described_class.new }
+
     let(:options) { { 'model' => klass } }
 
     it 'expect to assign a model search' do
@@ -31,6 +33,7 @@ RSpec.describe Macros::Model::Search do
 
   context 'when we want to search different key' do
     subject(:paginate_step) { described_class.new(name: 'different') }
+
     let(:options) { { 'different' => klass } }
 
     it 'expect to assign a different search' do

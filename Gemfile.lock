@@ -28,7 +28,7 @@ GEM
       uber (< 0.2.0)
     docile (1.1.5)
     i18n (0.8.1)
-    json (2.0.3)
+    json (2.0.4)
     minitest (5.10.1)
     pipetree (0.1.1)
     reform (2.2.4)

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Persist step for removing object assigned in options['model']

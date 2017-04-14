@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Contract::Validate do
   subject(:validate_step) { described_class.new(*args) }
 

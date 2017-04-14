@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Runs a pagination for a model and reassigns it under the same name

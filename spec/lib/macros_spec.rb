@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros do
   subject(:macros) { described_class }
 

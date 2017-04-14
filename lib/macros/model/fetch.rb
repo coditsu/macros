@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Macros
   class Model
     # Extracts from a given object from an options hash a given attribute/method and assigns

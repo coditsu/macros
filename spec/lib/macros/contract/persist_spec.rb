@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Macros::Contract::Persist do
   subject(:persist_step) { described_class.new(*args) }
 
