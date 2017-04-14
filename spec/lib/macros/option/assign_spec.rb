@@ -15,6 +15,7 @@ RSpec.describe Macros::Option::Assign do
 
   describe 'custom options key' do
     subject(:assign_step) { described_class.new(klass, name: name) }
+
     let(:name) { rand.to_s }
 
     it 'expect to assign under custom key' do

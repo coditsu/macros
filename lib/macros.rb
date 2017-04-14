@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-%w(
+%w[
   trailblazer
   require_all
   active_support/inflector
   uber/options
-).each { |lib| require lib }
+].each { |lib| require lib }
 
 # Trailblazer shared macros used across multiple apps
 module Macros
