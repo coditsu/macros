@@ -11,10 +11,18 @@ module Macros
       # @param validate [Boolean] should we validate this data - since we expect to import
       #   data validated by contracts, by default it is off (no validations on models)
       # @return [Macros::Model::Import] import step with appropriate options
-      def initialize(klass, key: 'model', validate: false)
+      def initialize(
+        klass,
+        key: 'model',
+        validate: false,
+        on_duplicate_key_ignore: true,
+        batch_size: nil
+      )
         @key = key
         @klass = klass
         @validate = validate
+        @on_duplicate_key_ignore = on_duplicate_key_ignore
+        @batch_size = batch_size
       end
 
       # Performs a batch insert of data into table
@@ -30,7 +38,8 @@ module Macros
           attributes,
           resources,
           validate: @validate,
-          on_duplicate_key_ignore: true
+          on_duplicate_key_ignore: @on_duplicate_key_ignore,
+          batch_size: @batch_size
         )
       end
     end

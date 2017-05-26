@@ -14,7 +14,8 @@ RSpec.describe Macros::Model::Import do
       attributes,
       import_data,
       validate: validate,
-      on_duplicate_key_ignore: true
+      on_duplicate_key_ignore: true,
+      batch_size: nil
     ]
   end
 
