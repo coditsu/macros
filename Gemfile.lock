@@ -58,7 +58,7 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.1)
     thread_safe (0.3.6)
-    timecop (0.8.1)
+    timecop (0.9.0)
     trailblazer (2.0.6)
       declarative
       reform (>= 2.2.0, < 3.0.0)
@@ -82,4 +82,4 @@ DEPENDENCIES
   timecop
 
 BUNDLED WITH
-   1.15.1
+   1.14.6
