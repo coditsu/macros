@@ -9,29 +9,59 @@ RSpec.describe Macros::Model::Import do
   let(:options) { { key => import_data } }
   let(:attributes) { import_data.first.attributes.keys - ['id'] }
 
-  let(:import_args) do
-    [
-      attributes,
-      import_data,
-      validate: validate,
-      on_duplicate_key_ignore: true,
-      batch_size: nil
-    ]
+  context 'when we import multiple elements in array' do
+    let(:import_args) do
+      [
+        attributes,
+        import_data,
+        validate: validate,
+        on_duplicate_key_ignore: true,
+        batch_size: nil
+      ]
+    end
+
+    let(:import_data) do
+      Array.new(rand(20) + 1) do
+        klass.new(
+          id: rand.to_s,
+          setup_state: rand,
+          attributes: { id: 1, setup_state: 2 }
+        )
+      end
+    end
+
+    it 'expect to import on klass' do
+      expect(klass).to receive(:import).with(*import_args)
+
+      import_step.call(options)
+    end
   end
 
-  let(:import_data) do
-    Array.new(rand(20) + 1) do
+  context 'when we import single element' do
+    let(:attributes) { import_data.attributes.keys - ['id'] }
+
+    let(:import_args) do
+      [
+        attributes,
+        [import_data],
+        validate: validate,
+        on_duplicate_key_ignore: true,
+        batch_size: nil
+      ]
+    end
+
+    let(:import_data) do
       klass.new(
         id: rand.to_s,
         setup_state: rand,
         attributes: { id: 1, setup_state: 2 }
       )
     end
-  end
 
-  it 'expect to import on klass' do
-    expect(klass).to receive(:import).with(*import_args)
+    it 'expect to import on klass' do
+      expect(klass).to receive(:import).with(*import_args)
 
-    import_step.call(options)
+      import_step.call(options)
+    end
   end
 end

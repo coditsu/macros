@@ -28,7 +28,8 @@ module Macros
       # Performs a batch insert of data into table
       # @param options [Trailblazer::Operation::Option] trbr options hash
       def call(options, **)
-        resources = options[@key]
+        # Wrapping with array allows us to import also single resources
+        resources = Array(options[@key])
 
         attributes = resources.first&.attributes&.keys || []
         nullify = resources.first&.id.to_s.empty?
