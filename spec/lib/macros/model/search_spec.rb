@@ -10,8 +10,14 @@ RSpec.describe Macros::Model::Search do
   end
 
   let(:current_search) { { rand(100) => rand(100) } }
-  let(:search) { OpenStruct.new(result: search_result) }
+  let(:search) { OpenStruct.new(result: search_result, sorts: sorts) }
   let(:search_result) { [rand] }
+  let(:sorts) { [] }
+
+  before do
+    expect(klass).to receive(:search).with(current_search).and_return(search)
+    paginate_step.call(options, current_search: current_search)
+  end
 
   context 'when we want to search model' do
     subject(:paginate_step) { described_class.new }
@@ -19,14 +25,10 @@ RSpec.describe Macros::Model::Search do
     let(:options) { { 'model' => klass } }
 
     it 'expect to assign a model search' do
-      expect(klass).to receive(:search).with(current_search).and_return(search)
-      paginate_step.call(options, current_search: current_search)
       expect(options['model_search']).to eq search
     end
 
     it 'expect to assign a search result' do
-      expect(klass).to receive(:search).with(current_search).and_return(search)
-      paginate_step.call(options, current_search: current_search)
       expect(options['model']).to eq search_result
     end
   end
@@ -37,15 +39,30 @@ RSpec.describe Macros::Model::Search do
     let(:options) { { 'different' => klass } }
 
     it 'expect to assign a different search' do
-      expect(klass).to receive(:search).with(current_search).and_return(search)
-      paginate_step.call(options, current_search: current_search)
       expect(options['different_search']).to eq search
     end
 
     it 'expect to assign a different search result' do
-      expect(klass).to receive(:search).with(current_search).and_return(search)
-      paginate_step.call(options, current_search: current_search)
       expect(options['different']).to eq search_result
+    end
+  end
+
+  context 'when we want to search with default_sort_order' do
+    subject(:paginate_step) { described_class.new(default_sort_order: sort_order) }
+
+    let(:sort_order) { rand.to_s }
+    let(:options) { { 'model' => klass } }
+
+    context 'when there are sorts loaded already' do
+      let(:sorts) { [rand.to_s] }
+
+      it { expect(options['model_search'].sorts).to eq sorts }
+    end
+
+    context 'when there is no sorts and we have our default' do
+      let(:sorts) { [] }
+
+      it { expect(options['model_search'].sorts).to eq [sort_order] }
     end
   end
 end
