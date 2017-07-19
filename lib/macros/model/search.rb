@@ -12,8 +12,8 @@ module Macros
     class Search < Macros::Base
       # @param name [String] name under which we will assign search results (also source for base
       #   search class)
-      # @param default_sort_order [String, Array<String>] default orders that we can apply when there
-      #   is no user sorting
+      # @param default_sort_order [String, Array<String>] default orders that we can apply when
+      #   there is no user sorting
       # @return [Macros::Model::Search] search macro step
       def initialize(name: 'model', default_sort_order: nil)
         @name = name
