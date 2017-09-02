@@ -4,5 +4,6 @@ module Macros
   # Macros for available shared steps related to params
   class Params < Base
     register :remap
+    register :fetch
   end
 end
