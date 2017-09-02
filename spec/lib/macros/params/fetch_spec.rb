@@ -12,4 +12,13 @@ RSpec.describe Macros::Params::Fetch do
     fetch_step.call(options, params: params)
     expect(options[to]).to eq params[from]
   end
+
+  context 'when to is not provided' do
+    let(:to) { nil }
+
+    it 'expect to use same key as from' do
+      fetch_step.call(options, params: params)
+      expect(options[from]).to eq params[from]
+    end
+  end
 end

@@ -6,9 +6,9 @@ module Macros
     class Fetch < Base
       # @param from [String, Symbol] params key under which our requested element is present
       # @param to [Strinig, Symbol] options key where we want to fetch our params value
-      def initialize(from:, to:)
+      def initialize(from:, to: nil)
         @from = from
-        @to = to
+        @to = to || from
       end
 
       # Fetches a given params key into options
