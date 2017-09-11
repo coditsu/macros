@@ -15,7 +15,7 @@ RSpec.describe Macros::Model::Search do
   let(:sorts) { [] }
 
   before do
-    expect(klass).to receive(:search).with(current_search).and_return(search)
+    allow(klass).to receive(:search).with(current_search).and_return(search)
     paginate_step.call(options, current_search: current_search)
   end
 
