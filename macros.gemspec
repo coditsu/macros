@@ -16,9 +16,9 @@ Gem::Specification.new do |spec|
   spec.description   = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
   spec.license       = 'Trade secret'
 
+  spec.add_dependency 'activesupport'
   spec.add_dependency 'require_all'
   spec.add_dependency 'trailblazer'
-  spec.add_dependency 'activesupport'
   spec.add_development_dependency 'bundler'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
