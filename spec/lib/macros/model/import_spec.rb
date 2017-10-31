@@ -1,10 +1,18 @@
 # frozen_string_literal: true
 
 RSpec.describe Macros::Model::Import do
-  subject(:import_step) { described_class.new(klass, key: key, validate: validate) }
+  subject(:import_step) do
+    described_class.new(
+      klass,
+      key: key,
+      validate: validate,
+      except: except
+    )
+  end
 
   let(:klass) { OpenStruct }
   let(:key) { rand.to_s }
+  let(:except) { [] }
   let(:validate) { rand(2) == 0 }
   let(:options) { { key => import_data } }
   let(:attributes) { import_data.first.attributes.keys - ['id'] }
@@ -12,7 +20,7 @@ RSpec.describe Macros::Model::Import do
   context 'when we import multiple elements in array' do
     let(:import_args) do
       [
-        attributes,
+        attributes.map(&:to_s),
         import_data,
         validate: validate,
         on_duplicate_key_ignore: true,
@@ -42,7 +50,7 @@ RSpec.describe Macros::Model::Import do
 
     let(:import_args) do
       [
-        attributes,
+        attributes.map(&:to_s),
         [import_data],
         validate: validate,
         on_duplicate_key_ignore: true,
@@ -56,6 +64,36 @@ RSpec.describe Macros::Model::Import do
         setup_state: rand,
         attributes: { id: 1, setup_state: 2 }
       )
+    end
+
+    it 'expect to import on klass' do
+      expect(klass).to receive(:import).with(*import_args)
+
+      import_step.call(options)
+    end
+  end
+
+  context 'when we want to ignore a given field' do
+    let(:except) { %i[setup_state] }
+
+    let(:import_args) do
+      [
+        attributes.map(&:to_s) - %w[setup_state],
+        import_data,
+        validate: validate,
+        on_duplicate_key_ignore: true,
+        batch_size: nil
+      ]
+    end
+
+    let(:import_data) do
+      Array.new(rand(20) + 1) do
+        klass.new(
+          id: rand.to_s,
+          setup_state: rand,
+          attributes: { id: 1, setup_state: 2 }
+        )
+      end
     end
 
     it 'expect to import on klass' do
