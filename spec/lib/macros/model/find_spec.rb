@@ -15,7 +15,7 @@ RSpec.describe Macros::Model::Find do
     end
   end
 
-  context 'default case' do
+  context 'when it is a default case' do
     subject(:query_step) { described_class.new(scope) }
 
     let(:params) { { params: { id: search_value } } }
@@ -27,7 +27,7 @@ RSpec.describe Macros::Model::Find do
     end
   end
 
-  context 'custom name assignment usage' do
+  context 'when custom name assignment usage' do
     subject(:query_step) { described_class.new(scope, name: name) }
 
     let(:name) { rand }
@@ -40,7 +40,7 @@ RSpec.describe Macros::Model::Find do
     end
   end
 
-  context 'custom action' do
+  context 'when custom action' do
     subject(:query_step) { described_class.new(scope, action) }
 
     let(:action) { :find_by }
@@ -53,7 +53,7 @@ RSpec.describe Macros::Model::Find do
     end
   end
 
-  context 'custom search key' do
+  context 'when custom search key' do
     subject(:query_step) { described_class.new(scope, search_attribute: search_attribute) }
 
     let(:search_attribute) { rand }
@@ -66,7 +66,7 @@ RSpec.describe Macros::Model::Find do
     end
   end
 
-  context 'custom params key' do
+  context 'when custom params key' do
     subject(:query_step) { described_class.new(scope, params_key: params_key) }
 
     let(:params_key) { rand }
