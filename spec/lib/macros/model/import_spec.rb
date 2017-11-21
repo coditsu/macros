@@ -5,7 +5,6 @@ RSpec.describe Macros::Model::Import do
     described_class.new(
       klass,
       key: key,
-      validate: validate,
       except: except
     )
   end
@@ -13,7 +12,6 @@ RSpec.describe Macros::Model::Import do
   let(:klass) { OpenStruct }
   let(:key) { rand.to_s }
   let(:except) { [] }
-  let(:validate) { rand(2) == 0 }
   let(:options) { { key => import_data } }
   let(:attributes) { import_data.first.attributes.keys - ['id'] }
 
@@ -22,7 +20,7 @@ RSpec.describe Macros::Model::Import do
       [
         attributes.map(&:to_s),
         import_data,
-        validate: validate,
+        validate: false,
         on_duplicate_key_ignore: true,
         batch_size: nil
       ]
@@ -52,7 +50,7 @@ RSpec.describe Macros::Model::Import do
       [
         attributes.map(&:to_s),
         [import_data],
-        validate: validate,
+        validate: false,
         on_duplicate_key_ignore: true,
         batch_size: nil
       ]
@@ -80,7 +78,7 @@ RSpec.describe Macros::Model::Import do
       [
         attributes.map(&:to_s) - %w[setup_state],
         import_data,
-        validate: validate,
+        validate: false,
         on_duplicate_key_ignore: true,
         batch_size: nil
       ]

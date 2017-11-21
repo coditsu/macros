@@ -8,8 +8,6 @@ module Macros
     class Import < Base
       # @param klass [Class] AR class that will be used to insert mass data into
       # @param key [String, Symbol] options key where the data that we want to import is
-      # @param validate [Boolean] should we validate this data - since we expect to import
-      #   data validated by contracts, by default it is off (no validations on models)
       # @param on_duplicate_key_ignore [Boolean] should we just ignore if duplicate or update
       # @param batch_size [Integer] batch size per each insert
       # @param except [Array] array with names of keys we want to ignore when inserting
@@ -17,14 +15,13 @@ module Macros
       def initialize(
         klass,
         key: 'model',
-        validate: false,
         on_duplicate_key_ignore: true,
         batch_size: nil,
         except: []
       )
         @key = key
         @klass = klass
-        @validate = validate
+        @validate = false
         @on_duplicate_key_ignore = on_duplicate_key_ignore
         @batch_size = batch_size
         @except = except
