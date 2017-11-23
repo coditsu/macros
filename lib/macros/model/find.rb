@@ -34,7 +34,7 @@ module Macros
         # :find works differently that any other AR search as it does not take attr name
         options[@name] = @scope.public_send(
           @action,
-          @action == :find ? params[@params_key] : { @search_attribute => params[@params_key] }
+          @action == :find ? params.fetch(@params_key) : { @search_attribute => params[@params_key] }
         )
       end
     end
