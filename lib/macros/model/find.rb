@@ -32,17 +32,17 @@ module Macros
       # @param params [Hash] hash with input parameters
       def call(options, params:, **)
         # :find works differently that any other AR search as it does not take attr name
-        if @action == :find
-          options[@name] = @scope.public_send(
-            @action,
-            params.fetch(@params_key)
-          )
-        else
-          options[@name] = @scope.public_send(
-            @action,
-            { @search_attribute => params[@params_key] }
-          )
-        end
+        options[@name] = if @action == :find
+                           @scope.public_send(
+                             @action,
+                             params.fetch(@params_key)
+                           )
+                         else
+                           @scope.public_send(
+                             @action,
+                             @search_attribute => params[@params_key]
+                           )
+                         end
       end
     end
   end
