@@ -27,7 +27,7 @@ RSpec.describe Macros::Model::Import do
     end
 
     let(:import_data) do
-      Array.new(rand(20) + 1) do
+      Array.new(rand(1..20)) do
         klass.new(
           id: rand.to_s,
           setup_state: rand,
@@ -85,7 +85,7 @@ RSpec.describe Macros::Model::Import do
     end
 
     let(:import_data) do
-      Array.new(rand(20) + 1) do
+      Array.new(rand(1..20)) do
         klass.new(
           id: rand.to_s,
           setup_state: rand,
