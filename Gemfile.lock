@@ -30,7 +30,7 @@ GEM
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
-    minitest (5.10.3)
+    minitest (5.11.0)
     pipetree (0.1.1)
     reform (2.2.4)
       disposable (>= 0.4.1)
