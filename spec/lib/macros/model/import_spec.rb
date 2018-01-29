@@ -22,6 +22,7 @@ RSpec.describe Macros::Model::Import do
         import_data,
         validate: false,
         on_duplicate_key_ignore: true,
+        on_duplicate_key_update: nil,
         batch_size: nil
       ]
     end
@@ -52,6 +53,7 @@ RSpec.describe Macros::Model::Import do
         [import_data],
         validate: false,
         on_duplicate_key_ignore: true,
+        on_duplicate_key_update: nil,
         batch_size: nil
       ]
     end
@@ -80,6 +82,7 @@ RSpec.describe Macros::Model::Import do
         import_data,
         validate: false,
         on_duplicate_key_ignore: true,
+        on_duplicate_key_update: nil,
         batch_size: nil
       ]
     end

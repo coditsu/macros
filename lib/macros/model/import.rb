@@ -16,6 +16,7 @@ module Macros
         klass,
         key: 'model',
         on_duplicate_key_ignore: true,
+        on_duplicate_key_update: nil,
         batch_size: nil,
         except: []
       )
@@ -23,6 +24,7 @@ module Macros
         @klass = klass
         @validate = false
         @on_duplicate_key_ignore = on_duplicate_key_ignore
+        @on_duplicate_key_update = on_duplicate_key_update
         @batch_size = batch_size
         @except = except
       end
@@ -43,6 +45,7 @@ module Macros
           resources,
           validate: @validate,
           on_duplicate_key_ignore: @on_duplicate_key_ignore,
+          on_duplicate_key_update: @on_duplicate_key_update,
           batch_size: @batch_size
         )
       end
