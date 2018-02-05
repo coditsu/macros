@@ -68,7 +68,7 @@ GEM
       declarative
       pipetree (>= 0.1.1, < 0.2.0)
       uber
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
 
