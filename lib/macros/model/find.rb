@@ -33,16 +33,16 @@ module Macros
       def call(ctx, params:, **)
         # :find works differently that any other AR search as it does not take attr name
         ctx[@name] = if @action == :find
-                           @scope.public_send(
-                             @action,
-                             params.fetch(@params_key)
-                           )
-                         else
-                           @scope.public_send(
-                             @action,
-                             @search_attribute => params[@params_key]
-                           )
-                         end
+                       @scope.public_send(
+                         @action,
+                         params.fetch(@params_key)
+                       )
+                     else
+                       @scope.public_send(
+                         @action,
+                         @search_attribute => params[@params_key]
+                       )
+                     end
       end
     end
   end
