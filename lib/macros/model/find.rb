@@ -2,18 +2,18 @@
 
 module Macros
   class Model
-    # Searches on a given scope and assigns result to an options hash
+    # Searches on a given scope and assigns result to an ctx hash
     #
-    # @example Simple find using #find and 'model' options key
+    # @example Simple find using #find and 'model' ctx key
     #   step Macros::Model::Find(Repository)
     #
     # @example Find that searches on Repository and assigns under alternative name
     #   step Macros::Model::Find(Repository, name: 'repository')
     class Find < Base
-      # Creates a macro instance with appropriate options
+      # Creates a macro instance with appropriate ctx
       # @param scope [Class, ActiveRecord::Relation] class or AR relation on which we search
       # @param action [Symbol] action/method  name that we want to use to perform search on scope
-      # @param name [String] name under which we will assign results in the options hash
+      # @param name [String] name under which we will assign results in the ctx hash
       # @param search_attribute [Symbol] attribute name that will be searched on
       # @return [Macros::Model::Find] find macro instance
       #
@@ -27,12 +27,12 @@ module Macros
         @search_attribute = search_attribute
       end
 
-      # Performs a search find given options
-      # @param options [Trailblazer::Operation::Option] trbr options hash
+      # Performs a search find given ctx
+      # @param ctx [Trailblazer::Skill] trbr context hash
       # @param params [Hash] hash with input parameters
-      def call(options, params:, **)
+      def call(ctx, params:, **)
         # :find works differently that any other AR search as it does not take attr name
-        options[@name] = if @action == :find
+        ctx[@name] = if @action == :find
                            @scope.public_send(
                              @action,
                              params.fetch(@params_key)

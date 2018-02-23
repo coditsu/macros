@@ -3,7 +3,7 @@
 RSpec.describe Macros::Karafka::Broadcast do
   subject(:broadcast_step) { described_class.new(responder_class, name: name) }
 
-  let(:options) { { name => rand } }
+  let(:ctx) { { name => rand } }
   let(:name) { rand.to_s }
   let(:responder_class) do
     Class.new do
@@ -11,8 +11,8 @@ RSpec.describe Macros::Karafka::Broadcast do
     end
   end
 
-  it 'expect to assign options attribute under resource' do
-    expect(responder_class).to receive(:call).with(options[name])
-    broadcast_step.call(options)
+  it 'expect to assign ctx attribute under resource' do
+    expect(responder_class).to receive(:call).with(ctx[name])
+    broadcast_step.call(ctx)
   end
 end

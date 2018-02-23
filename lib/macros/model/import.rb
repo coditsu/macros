@@ -7,11 +7,11 @@ module Macros
     #   step Macros::Model::Import(CommitBuild, key: 'commit_builds')
     class Import < Base
       # @param klass [Class] AR class that will be used to insert mass data into
-      # @param key [String, Symbol] options key where the data that we want to import is
+      # @param key [String, Symbol] ctx key where the data that we want to import is
       # @param on_duplicate_key_ignore [Boolean] should we just ignore if duplicate or update
       # @param batch_size [Integer] batch size per each insert
       # @param except [Array] array with names of keys we want to ignore when inserting
-      # @return [Macros::Model::Import] import step with appropriate options
+      # @return [Macros::Model::Import] import step with appropriate ctx
       def initialize(
         klass,
         key: 'model',
@@ -30,10 +30,10 @@ module Macros
       end
 
       # Performs a batch insert of data into table
-      # @param options [Trailblazer::Operation::Option] trbr options hash
-      def call(options, **)
+      # @param ctx [Trailblazer::Skill] trbr context hash
+      def call(ctx, **)
         # Wrapping with array allows us to import also single resources
-        resources = Array(options[@key])
+        resources = Array(ctx[@key])
 
         attributes = (resources.first&.attributes&.keys || [])
         nullify = resources.first&.id.to_s.empty?

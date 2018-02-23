@@ -15,24 +15,24 @@ RSpec.describe Macros::Model::Paginate do
   context 'when we want to paginate model' do
     subject(:paginate_step) { described_class.new }
 
-    let(:options) { { 'model' => klass } }
+    let(:ctx) { { 'model' => klass } }
 
     it 'expect to retrieve a given page' do
       expect(klass).to receive(:page).with(current_page).and_return(page)
-      paginate_step.call(options, current_page: current_page)
-      expect(options['model']).to eq page
+      paginate_step.call(ctx, current_page: current_page)
+      expect(ctx['model']).to eq page
     end
   end
 
-  context 'when we want to paginate a different options key resource' do
+  context 'when we want to paginate a different ctx key resource' do
     subject(:paginate_step) { described_class.new(name: 'different') }
 
-    let(:options) { { 'different' => klass } }
+    let(:ctx) { { 'different' => klass } }
 
     it 'expect to retrieve a given page' do
       expect(klass).to receive(:page).with(current_page).and_return(page)
-      paginate_step.call(options, current_page: current_page)
-      expect(options['different']).to eq page
+      paginate_step.call(ctx, current_page: current_page)
+      expect(ctx['different']).to eq page
     end
   end
 end

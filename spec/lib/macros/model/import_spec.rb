@@ -12,7 +12,7 @@ RSpec.describe Macros::Model::Import do
   let(:klass) { OpenStruct }
   let(:key) { rand.to_s }
   let(:except) { [] }
-  let(:options) { { key => import_data } }
+  let(:ctx) { { key => import_data } }
   let(:attributes) { import_data.first.attributes.keys - ['id'] }
 
   context 'when we import multiple elements in array' do
@@ -40,7 +40,7 @@ RSpec.describe Macros::Model::Import do
     it 'expect to import on klass' do
       expect(klass).to receive(:import).with(*import_args)
 
-      import_step.call(options)
+      import_step.call(ctx)
     end
   end
 
@@ -69,7 +69,7 @@ RSpec.describe Macros::Model::Import do
     it 'expect to import on klass' do
       expect(klass).to receive(:import).with(*import_args)
 
-      import_step.call(options)
+      import_step.call(ctx)
     end
   end
 
@@ -100,7 +100,7 @@ RSpec.describe Macros::Model::Import do
     it 'expect to import on klass' do
       expect(klass).to receive(:import).with(*import_args)
 
-      import_step.call(options)
+      import_step.call(ctx)
     end
   end
 end

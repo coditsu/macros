@@ -7,8 +7,8 @@ module Macros
     # @example
     #   step Macros::Option::Assign(Repository::Author)
     #   step Macros::Model::Search()
-    #   options['model_search'] #=> Ransack search object
-    #   options['model'] #=> Repository authors that match search
+    #   ctx['model_search'] #=> Ransack search object
+    #   ctx['model'] #=> Repository authors that match search
     class Search < Macros::Base
       # @param name [String] name under which we will assign search results (also source for base
       #   search class)
@@ -23,14 +23,14 @@ module Macros
       end
 
       # Performs this macro
-      # @param options [Trailblazer::Operation::Option] trbr options hash
+      # @param ctx [Trailblazer::Skill] trbr context hash
       # @param current_search [Hash] hash with ransack search details
-      def call(options, current_search:, **)
-        search = options[@name].search(current_search)
+      def call(ctx, current_search:, **)
+        search = ctx[@name].search(current_search)
         search.sorts = @default_sort_order if search.sorts.empty?
 
-        options["#{@name}_search"] = search
-        options[@name] = search.result
+        ctx["#{@name}_search"] = search
+        ctx[@name] = search.result
       end
     end
   end

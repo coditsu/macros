@@ -2,14 +2,14 @@
 
 module Macros
   class Model
-    # Destroy step for removing object assigned in options['model']
+    # Destroy step for removing object assigned in ctx['model']
     # @example
     #   step Macros::Model::Destroy()
     class Destroy < Base
       # Destroys a given model
-      # @param _options [Trailblazer::Operation::Option] options accumulator
+      # @param _ctx [Trailblazer::Skill] context accumulator
       # @param model [Object] object that we want to destroy
-      def call(_options, model:, **)
+      def call(_ctx, model:, **)
         model.destroy
       end
     end

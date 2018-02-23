@@ -6,19 +6,19 @@ RSpec.describe Macros::Params::Fetch do
   let(:from) { :a }
   let(:to) { rand }
   let(:params) { { rand => rand, a: 1 } }
-  let(:options) { {} }
+  let(:ctx) { {} }
 
-  it 'expect to fetch proper value from params to options' do
-    fetch_step.call(options, params: params)
-    expect(options[to]).to eq params[from]
+  it 'expect to fetch proper value from params to ctx' do
+    fetch_step.call(ctx, params: params)
+    expect(ctx[to]).to eq params[from]
   end
 
   context 'when to is not provided' do
     let(:to) { nil }
 
     it 'expect to use same key as from' do
-      fetch_step.call(options, params: params)
-      expect(options[from]).to eq params[from]
+      fetch_step.call(ctx, params: params)
+      expect(ctx[from]).to eq params[from]
     end
   end
 end

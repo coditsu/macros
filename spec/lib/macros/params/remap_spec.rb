@@ -13,11 +13,11 @@ RSpec.describe Macros::Params::Remap do
 
   let(:params) { { rand => rand } }
   let(:remapped_params) { { rand => rand } }
-  let(:options) { {} }
+  let(:ctx) { {} }
 
   it 'expect to use mapper class and assign result to params' do
     expect(mapper_class).to receive(:call).with(params).and_return(remapped_params)
-    remap_step.call(options, params: params)
-    expect(options['params']).to eq remapped_params
+    remap_step.call(ctx, params: params)
+    expect(ctx['params']).to eq remapped_params
   end
 end

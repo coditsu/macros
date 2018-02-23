@@ -11,10 +11,10 @@ module Macros
       end
 
       # Uses default mapper to remap params
-      # @param options [Trailblazer::Operation::Option] options accumulator
+      # @param ctx [Trailblazer::Skill] context accumulator
       # @param params [Hash] hash with params for remapping
-      def call(options, params:, **)
-        options['params'] = @remapper_class.call(params)
+      def call(ctx, params:, **)
+        ctx['params'] = @remapper_class.call(params)
       end
     end
   end

@@ -12,13 +12,13 @@ module Macros
         @error_class = error_class
       end
 
-      # @param options [Trailblazer::Operation::Result] operation result
+      # @param ctx [Trailblazer::Operation::Result] operation result
       # @param args Any additional arguments that operation will pass
       # @raise [Exception] any exception that we've set to be raised in the initializer
-      def call(options, *args)
+      def call(ctx, *args)
         raise @error_class, [
-          options['current_operation'],
-          options['current_step'],
+          ctx['current_operation'],
+          ctx['current_step'],
           args
         ]
       end

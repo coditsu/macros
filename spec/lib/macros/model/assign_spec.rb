@@ -15,7 +15,7 @@ RSpec.describe Macros::Model::Assign do
   let(:key) { 'resource' }
   let(:value) { rand.to_s }
 
-  it 'expect to assign options attribute under resource' do
+  it 'expect to assign ctx attribute under resource' do
     assign_step.call(key => value, 'model' => model)
     expect(model.resource).to eq value
   end
