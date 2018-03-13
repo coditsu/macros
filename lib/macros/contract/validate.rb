@@ -9,7 +9,9 @@ module Macros
     class Validate < Base
       # Creates a contact validation step
       def call
-        Trailblazer::Operation::Contract::Validate(*args)
+        Trailblazer::Operation::Contract::Validate(
+          *(args.empty? ? [{ key: :data }] : args)
+        )
       end
     end
   end
