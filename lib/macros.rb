@@ -14,7 +14,7 @@ module Macros
     # @example
     #   Macros.gem_root #=> '/home/user/.gems/macros'
     def gem_root
-      File.expand_path('../..', __FILE__)
+      File.expand_path('..', __dir__)
     end
   end
 end
