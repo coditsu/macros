@@ -12,11 +12,11 @@ module Macros
         @to = to
       end
 
-      # @param ctx [Trailblazer::Skill] context accumulator
+      # @param _ctx [Trailblazer::Skill] context accumulator
       # @param params [Hash] hash with params for remapping
       # @note We don't remove the original key as we anyhow sanitize stuff with contracts
       #  so it is not worth and original field can be used in other places
-      def call(ctx, params:, **)
+      def call(_ctx, params:, **)
         params[@to] = params.dig(*@from)
       end
     end
