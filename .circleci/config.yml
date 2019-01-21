@@ -16,7 +16,7 @@ jobs:
 
   specs:
     docker:
-      - image: circleci/ruby:2.6.0-slim-stretch
+      - image: circleci/ruby:2.6.0-node-browsers
     steps:
       - restore_cache:
           keys:
