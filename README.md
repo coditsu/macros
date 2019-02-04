@@ -15,9 +15,18 @@ module Repositories
 end
 ```
 
-## Table of contents
+## Table of Contents
 
-
+* [Trailblazer Coditsu Macros Engine](#trailblazer-coditsu-macros-engine)
+   * [Table of contents](#table-of-contents)
+   * [Macros types](#macros-types)
+      * [Contract macros](#contract-macros)
+      * [Context macros](#context-macros)
+      * [Error macros](#error-macros)
+      * [Karafka macros](#karafka-macros)
+      * [Model macros](#model-macros)
+      * [Params macros](#params-macros)
+   * [Note on contributions](#note-on-contributions)
 
 ## Macros types
 
