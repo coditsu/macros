@@ -2,7 +2,7 @@
 
 module Macros
   class Contract
-    # @example Set contract class and build a new contract
+    # @example Step for setting contract class and building a new contract
     #   contract Contracts::MyContract
     #   step Macros::Contract::Build()
     class Build < Base

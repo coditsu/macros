@@ -2,7 +2,7 @@
 
 module Macros
   class Model
-    # Searches on a given scope and assigns result to an ctx hash
+    # Searches on a given scope and assigns result to a ctx hash
     #
     # @example Simple find using #find and 'model' ctx key
     #   step Macros::Model::Find(Repository)

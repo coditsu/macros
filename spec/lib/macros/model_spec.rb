@@ -9,10 +9,6 @@ RSpec.describe Macros::Model do
     end
   end
 
-  describe '#Assign()' do
-    it { expect(described_class::Assign(scope)).to be_a described_class::Assign }
-  end
-
   describe '#Find()' do
     it { expect(described_class::Find(scope)).to be_a described_class::Find }
   end

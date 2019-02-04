@@ -2,5 +2,5 @@
 
 module Macros
   # Current Macros version
-  VERSION = '1.17.0'
+  VERSION = '1.15.0'
 end

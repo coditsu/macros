@@ -2,7 +2,7 @@
 
 module Macros
   class Karafka
-    # Broadcasts a given field with a given responder
+    # Broadcasts a given context field using a given responder
     class Broadcast < Base
       # @param responder_class [Class] class name of a responder we want to use
       # @param name [String, Symbol] key name of resource in trbr context hash that

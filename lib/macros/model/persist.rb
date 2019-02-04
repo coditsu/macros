@@ -2,7 +2,7 @@
 
 module Macros
   class Model
-    # Persist step for removing object assigned in ctx['model']
+    # Persist step for saving object assigned in ctx['model']
     # @example
     #   step Macros::Model::Persist()
     class Persist < Base

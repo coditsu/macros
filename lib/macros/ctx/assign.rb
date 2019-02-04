@@ -3,7 +3,7 @@
 module Macros
   # Macros for manipulating ctx
   class Ctx
-    # Assigns a given class to an ctx key for further usage
+    # Assigns a given class to a ctx key for further usage
     # @example Assign Repository class as a model (for search, etc)
     #   step Macros::Ctx::Assign(Repository)
     class Assign < Macros::Base
