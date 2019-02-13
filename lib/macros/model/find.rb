@@ -15,6 +15,7 @@ module Macros
       # @param action [Symbol] action/method  name that we want to use to perform search on scope
       # @param name [String] name under which we will assign results in the ctx hash
       # @param search_attribute [Symbol] attribute name that will be searched on
+      # @param params_key [Symbol] key under which the search value is present
       # @return [Macros::Model::Find] find macro instance
       #
       # @example Commit search on repository_id

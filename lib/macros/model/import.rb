@@ -9,6 +9,7 @@ module Macros
       # @param klass [Class] AR class that will be used to insert mass data into
       # @param key [String, Symbol] ctx key where the data that we want to import is
       # @param on_duplicate_key_ignore [Boolean] should we just ignore if duplicate or update
+      # @param on_duplicate_key_update [true, nil] should we do an upsert
       # @param batch_size [Integer] batch size per each insert
       # @param except [Array] array with names of keys we want to ignore when inserting
       # @return [Macros::Model::Import] import step with appropriate ctx
