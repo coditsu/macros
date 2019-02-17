@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.authors       = ['Maciej Mensfeld']
   spec.email         = %w[maciej@mensfeld.pl]
-  spec.homepage      = 'https://coditsu.com'
+  spec.homepage      = 'https://coditsu.io'
   spec.summary       = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
   spec.description   = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
   spec.license       = 'MIT'
