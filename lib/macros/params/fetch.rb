@@ -5,7 +5,7 @@ module Macros
     # Fetches a given param key into the ctx hash for further usage
     class Fetch < Base
       # @param from [String, Symbol] params key under which our requested element is present
-      # @param to [Strinig, Symbol] ctx key where we want to fetch our params value
+      # @param to [String, Symbol] ctx key where we want to fetch our params value
       def initialize(from:, to: nil)
         @from = Array(from)
         @to = to || @from.last

@@ -11,7 +11,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
   require lib
 end
 
-# Don't include unnecessary stuff into rcov
+# Don't include unnecessary stuff into coverage
 SimpleCov.start do
   add_filter '/.bundle/'
   add_filter '/doc/'

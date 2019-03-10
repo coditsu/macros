@@ -15,7 +15,7 @@ module Macros
         @klass = klass
       end
 
-      # Assings klass under appropriate ctx key
+      # Assigns klass under appropriate ctx key
       # @param ctx [Trailblazer::Skill] trbr context hash
       def call(ctx, **)
         ctx[@name] = @klass

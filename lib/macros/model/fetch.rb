@@ -10,7 +10,7 @@ module Macros
     #   ctx['repository'] #=> Repository instance
     class Fetch < Macros::Base
       # @param resource_name [Symbol] name of element/resource that we want to extract and
-      #   method that we want to use to exract it at the same time
+      #   method that we want to use to extract it at the same time
       # @param from [String] ctx key under which the base model for fetching is
       # @param to [String, nil] ctx key under the target fetched element should be saved
       #   If not provided, will assign under the same name as resource_name

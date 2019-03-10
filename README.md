@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/coditsu/macros/tree/master.svg?style=svg)](https://circleci.com/gh/coditsu/macros/tree/master)
 
-Set of macros for nicer composition of Traiblazer operations.
+Set of macros for nicer composition of Trailblazer operations.
 
 Example:
 
