@@ -32,7 +32,7 @@ module Macros
       # @param ctx [Trailblazer::Skill] trbr context hash
       # @param params [Hash] hash with input parameters
       def call(ctx, params:, **)
-        # :find works differently that any other AR search as it does not take attr name
+        # :find works differently that any other AR search as it does not take attribute name
         ctx[@name] = if @action == :find
                        @scope.public_send(
                          @action,

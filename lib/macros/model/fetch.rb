@@ -3,7 +3,7 @@
 module Macros
   class Model
     # Extracts from a given object from a ctx hash a given attribute/method and assigns
-    # it under diferrent key
+    # it under different key
     # @example Find validation object and fetch repository out of it
     #   step Macros::Model::Find(Validation, name: 'validation', params_key: :validation_id)
     #   step Macros::Model::Fetch(:repository, from: 'validation')
