@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.version       = ::Macros::VERSION
   spec.platform      = Gem::Platform::RUBY
   spec.authors       = ['Maciej Mensfeld']
-  spec.email         = %w[maciej@mensfeld.pl]
+  spec.email         = %w[contact@coditsu.io]
   spec.homepage      = 'https://coditsu.io'
   spec.summary       = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
   spec.description   = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
