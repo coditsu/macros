@@ -19,3 +19,4 @@
 .yardoc
 /coverage
 /.yard
+.coditsu/local.yml
