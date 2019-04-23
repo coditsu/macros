@@ -12,7 +12,9 @@ jobs:
             -e CODITSU_API_KEY \
             -e CODITSU_API_SECRET \
             -e CODITSU_REPOSITORY_ID \
-            --volumes-from sources coditsu/build-runner:latest
+            -e CODITSU_BUILD_BRANCH=$CIRCLE_BRANCH \
+            --volumes-from sources \
+            coditsu/build-runner:latest
 
   specs:
     docker:
