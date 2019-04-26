@@ -8,6 +8,7 @@ module Macros
     # @example Add as a last step so if anything fails - will raise
     #   failure Macros::Error::Raise()
     class Raise < Base
+      # @param error_class [Class] error class that should be used to raise the error
       def initialize(error_class)
         @error_class = error_class
       end
