@@ -13,6 +13,7 @@ jobs:
             -e CODITSU_API_SECRET \
             -e CODITSU_REPOSITORY_ID \
             -e CODITSU_BUILD_BRANCH=$CIRCLE_BRANCH \
+            -e CODITSU_ENV=ci \
             --volumes-from sources \
             --net=host \
             coditsu/build-runner:latest
