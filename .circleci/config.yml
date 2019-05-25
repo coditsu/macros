@@ -5,7 +5,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: \curl -sSL https://app.coditsu.io/scripts/circle | bash
+      - run: \curl -sSL https://api.coditsu.io/run/circle | bash
 
   specs:
     docker:
