@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros do
+RSpec.describe_current do
   subject(:macros) { described_class }
 
   describe '#gem_root' do

@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:coditsu/support-engine.git
+  revision: ddad599e3f5b68fc26f7e966c3882e426250269c
+  specs:
+    support_engine (0.1.4)
+      activesupport
+      require_all
+
 PATH
   remote: .
   specs:
@@ -79,6 +87,7 @@ DEPENDENCIES
   macros!
   rspec
   simplecov
+  support_engine!
 
 BUNDLED WITH
    2.0.2

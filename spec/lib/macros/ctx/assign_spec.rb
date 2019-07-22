@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Ctx::Assign do
+RSpec.describe_current do
   let(:klass) { Class.new }
   let(:ctx) { {} }
 

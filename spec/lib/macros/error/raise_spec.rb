@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Error::Raise do
+RSpec.describe_current do
   subject(:raise_step) { described_class.new(error_class) }
 
   let(:ctx) { { 'current_operation' => rand, 'current_step' => rand } }

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Fetch do
+RSpec.describe_current do
   let(:klass) do
     Class.new do
       attr_reader :resource

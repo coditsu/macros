@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Contract::Validate do
+RSpec.describe_current do
   subject(:validate_step) { described_class.new(*args) }
 
   let(:args) { { rand => rand } }

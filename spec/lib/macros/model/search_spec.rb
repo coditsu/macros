@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Search do
+RSpec.describe_current do
   let(:klass) do
     Class.new do
       def self.search(_current_search); end

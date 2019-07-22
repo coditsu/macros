@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Import do
+RSpec.describe_current do
   subject(:import_step) do
     described_class.new(
       klass,

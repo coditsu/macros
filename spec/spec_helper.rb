@@ -6,6 +6,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 %w[
   rubygems
   simplecov
+  support_engine/rspec_locator
 ].each do |lib|
   require lib
 end
@@ -31,3 +32,5 @@ RSpec.configure do |config|
 end
 
 require 'macros'
+
+RSpec.extend SupportEngine::RSpecLocator.new(__FILE__)

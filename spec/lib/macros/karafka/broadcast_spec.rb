@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Karafka::Broadcast do
+RSpec.describe_current do
   subject(:broadcast_step) { described_class.new(responder_class, name: name) }
 
   let(:ctx) { { name => rand } }

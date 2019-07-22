@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Find do
+RSpec.describe_current do
   let(:ctx) { {} }
   let(:found_instance) { scope.new }
   let(:search_value) { rand }

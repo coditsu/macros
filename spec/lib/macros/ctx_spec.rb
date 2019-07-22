@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Ctx do
+RSpec.describe_current do
   pending
 end

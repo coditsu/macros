@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Contract::Persist do
+RSpec.describe_current do
   subject(:persist_step) { described_class.new(*args) }
 
   let(:args) { { rand => rand } }

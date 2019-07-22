@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Params::Fetch do
+RSpec.describe_current do
   subject(:fetch_step) { described_class.new(from: from, to: to) }
 
   let(:from) { :a }

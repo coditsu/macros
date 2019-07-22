@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Contract do
+RSpec.describe_current do
   describe '#Build()' do
     it 'proxy to trbr contract build' do
       expect(described_class::Build()[1]).to eq Trailblazer::Operation::Contract::Build()[1]

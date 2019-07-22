@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Build do
+RSpec.describe_current do
   subject(:build_step) { described_class.new(scope) }
 
   let(:scope) { Class.new }

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Model::Paginate do
+RSpec.describe_current do
   let(:klass) do
     Class.new do
       def self.page(_page_number); end

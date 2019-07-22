@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Macros::Karafka do
+RSpec.describe_current do
   let(:scope) { Class.new }
 
   describe '#Broadcast()' do
