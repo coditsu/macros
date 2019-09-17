@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: 6666d2f0ead18cbacad7b9619f57b71feb853d93
+  revision: 738df3ee0f99b8bb0aa392e2f0e33634e084b010
   specs:
     support_engine (0.1.4)
       activesupport
