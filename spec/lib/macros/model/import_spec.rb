@@ -103,45 +103,4 @@ RSpec.describe_current do
       import_step.call(ctx)
     end
   end
-
-  context 'when we want to on on_duplicate_key_update' do
-    subject(:import_step) do
-      described_class.new(
-        klass,
-        key: key,
-        except: except,
-        on_duplicate_key_ignore: false,
-        on_duplicate_key_update: %i[setup_state]
-      )
-    end
-
-    let(:except) { %i[setup_state] }
-
-    let(:import_args) do
-      [
-        attributes.map(&:to_s) - %w[setup_state],
-        [import_data.last],
-        validate: false,
-        on_duplicate_key_ignore: false,
-        on_duplicate_key_update: %i[setup_state],
-        batch_size: nil
-      ]
-    end
-
-    let(:import_data) do
-      Array.new(rand(1..20)) do
-        klass.new(
-          id: 1,
-          setup_state: rand,
-          attributes: { id: 1, setup_state: rand }
-        )
-      end
-    end
-
-    it 'expect to import on klass' do
-      expect(klass).to receive(:import).with(*import_args)
-
-      import_step.call(ctx)
-    end
-  end
 end
