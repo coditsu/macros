@@ -40,6 +40,12 @@ module Macros
         nullify = resources.first&.id.to_s.empty?
         attributes.delete('id') if nullify
 
+        if @on_duplicate_key_update && !nullify
+          resources = resources
+                      .each_with_object({}) { |resource, buffer| buffer[resource.id] = resource }
+                      .values
+        end
+
         # We normalize attributes to strings to support hashes and structs
         @klass.import(
           attributes.map(&:to_s) - @except.map(&:to_s),
