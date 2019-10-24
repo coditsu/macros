@@ -1,10 +1,10 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: 28c20fc58d8da8b689bda50d80602f846e69a35d
+  revision: 5144ea51d0178dccf52b60c536959da4df74db0d
   specs:
     support_engine (0.1.4)
       activesupport
-      require_all
+      zeitwerk
 
 PATH
   remote: .
