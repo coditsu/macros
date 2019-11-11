@@ -93,7 +93,7 @@ end
 
 - `Macros::Model::Build` - Build step for creating new objects from a class/scope
 - `Macros::Model::Destroy` - Destroy step for removing object assigned in `ctx['model']`
-- `Macros::Model::Fetch` - Extracts from a given object from a ctx hash a given attribute/method and assigns it under diferrent key
+- `Macros::Model::Fetch` - Extracts from a given object from a ctx hash a given attribute/method and assigns it under different key
 - `Macros::Model::Find` - Searches on a given scope and assigns result to a ctx hash
 - `Macros::Model::Import` - Import step for mass data import
 - `Macros::Model::Paginate` - Runs a pagination for a model and reassigns it under the same name
