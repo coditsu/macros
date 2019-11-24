@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: c62707199b484cab6cf6e9b27b26225d37fd3e9f
+  revision: 8ae3cbfe9897eb048955b21c444bf7c77b034a7c
   specs:
     support_engine (0.1.4)
       activesupport
@@ -73,10 +73,10 @@ GEM
       trailblazer-operation
     trailblazer-activity (0.10.0)
       trailblazer-context (>= 0.2.0, < 0.3.0)
-    trailblazer-activity-dsl-linear (0.2.1)
+    trailblazer-activity-dsl-linear (0.2.2)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
     trailblazer-context (0.2.0)
-    trailblazer-developer (0.0.9)
+    trailblazer-developer (0.0.10)
       representable
       trailblazer-activity (>= 0.10.0, < 1.0.0)
       trailblazer-activity-dsl-linear
