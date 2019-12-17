@@ -25,10 +25,14 @@ jobs:
           keys:
             - v{{ .Environment.CIRCLE_CACHE_VERSION }}-{{arch}}-gem-lock-{{ checksum "Gemfile.lock" }}
             - v{{ .Environment.CIRCLE_CACHE_VERSION }}-{{arch}}-gem-lock-
-      - run: gem update --system
-      - run: gem install bundler
-      - run: bundle config github.https true
-      - run: bundle check --path=vendor/bundle || bundle install --path vendor/bundle
+      - run: |
+          git config --global user.email "ci@coditsu.io"
+          git config --global user.name "Coditsu CI"
+          sudo rm -rf /usr/local/bin/bundle && gem install bundler
+          bundle update --bundler
+          yes | gem update --system || true
+          bundle config github.https true
+          bundle check --path=vendor/bundle || bundle install --path vendor/bundle
       - save_cache:
           key: v{{ .Environment.CIRCLE_CACHE_VERSION }}-{{arch}}-gem-lock-{{ checksum "Gemfile.lock" }}
           paths:
