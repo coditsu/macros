@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: 95d9759f80286ba27ab86277825d88b37b8dec53
+  revision: 77c821e2cd0de2ac149be7346b6d6b7245095f34
   specs:
     support_engine (0.1.4)
       activesupport
@@ -36,7 +36,7 @@ GEM
       representable (>= 2.4.0, <= 3.1.0)
       uber (< 0.2.0)
     docile (1.3.2)
-    i18n (1.7.1)
+    i18n (1.8.0)
       concurrent-ruby (~> 1.0)
     json (2.3.0)
     minitest (5.13.0)
@@ -73,7 +73,7 @@ GEM
       trailblazer-operation
     trailblazer-activity (0.10.0)
       trailblazer-context (>= 0.2.0, < 0.3.0)
-    trailblazer-activity-dsl-linear (0.2.4)
+    trailblazer-activity-dsl-linear (0.2.5)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
     trailblazer-context (0.2.0)
     trailblazer-developer (0.0.10)
