@@ -36,6 +36,7 @@ GEM
       representable (>= 2.4.0, <= 3.1.0)
       uber (< 0.2.0)
     docile (1.3.2)
+    hirb (0.7.3)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     minitest (5.14.0)
@@ -74,7 +75,8 @@ GEM
     trailblazer-activity-dsl-linear (0.2.6)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
     trailblazer-context (0.2.0)
-    trailblazer-developer (0.0.10)
+    trailblazer-developer (0.0.11)
+      hirb
       representable
       trailblazer-activity (>= 0.10.0, < 1.0.0)
       trailblazer-activity-dsl-linear
@@ -89,7 +91,7 @@ GEM
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
