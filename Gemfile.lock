@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: f6ab51b3a82e1c4b61dfef523c58a6c515728866
+  revision: 0088bbccab484b9c6461be6956b8750e6e9a5079
   specs:
     support_engine (0.1.4)
       activesupport
@@ -54,7 +54,7 @@ GEM
       rspec-mocks (~> 3.9.0)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
-    rspec-expectations (3.9.0)
+    rspec-expectations (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-mocks (3.9.1)
