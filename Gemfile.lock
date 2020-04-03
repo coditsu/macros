@@ -88,7 +88,7 @@ GEM
       trailblazer-activity (>= 0.10.0, < 1.0.0)
       trailblazer-activity-dsl-linear (>= 0.2.1, < 1.0.0)
       trailblazer-developer (>= 0.0.8)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uber (0.1.0)
     zeitwerk (2.3.0)
