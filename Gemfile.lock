@@ -28,7 +28,7 @@ GEM
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
-    diff-lcs (1.3)
+    diff-lcs (1.4.2)
     disposable (0.4.7)
       declarative (>= 0.0.9, < 1.0.0)
       declarative-builder (< 0.2.0)
@@ -76,7 +76,7 @@ GEM
     trailblazer-activity-dsl-linear (0.2.8)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
     trailblazer-context (0.2.0)
-    trailblazer-developer (0.0.12)
+    trailblazer-developer (0.0.13)
       hirb
       representable
       trailblazer-activity (>= 0.10.0, < 1.0.0)
