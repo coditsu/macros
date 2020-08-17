@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: 4a2f7150a908c13dc0da2385c317149d842608b2
+  revision: f907f9941f2999a114a56e3b27744e4916e4d6c5
   specs:
     support_engine (0.1.4)
       activesupport
@@ -62,7 +62,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
-    simplecov (0.18.5)
+    simplecov (0.19.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.2)
@@ -73,10 +73,10 @@ GEM
       trailblazer-operation
     trailblazer-activity (0.11.0)
       trailblazer-context (>= 0.3.0, < 0.4.0)
-    trailblazer-activity-dsl-linear (0.2.9)
+    trailblazer-activity-dsl-linear (0.3.0)
       trailblazer-activity (>= 0.9.1, < 1.0.0)
     trailblazer-context (0.3.0)
-    trailblazer-developer (0.0.15)
+    trailblazer-developer (0.0.16)
       hirb
       representable
       trailblazer-activity (>= 0.11.0, < 1.0.0)
