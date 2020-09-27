@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:coditsu/support-engine.git
-  revision: 1964f39951aa1bb0f06bf1f42b8613edc7ab74bf
+  revision: 3129d8a04a978173905e76d711798b0b930e9820
   specs:
     support_engine (0.1.4)
       activesupport
@@ -66,7 +66,7 @@ GEM
     simplecov (0.19.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
-    simplecov-html (0.12.2)
+    simplecov-html (0.12.3)
     thread_safe (0.3.6)
     trailblazer (2.1.0)
       trailblazer-macro (>= 2.1.0, < 2.2.0)
