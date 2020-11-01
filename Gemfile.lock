@@ -15,7 +15,7 @@ PATH
       trailblazer
 
 GEM
-  remote: https://my.diffend.io/protect/gems/
+  remote: https://rubygems.org/
   specs:
     activesupport (6.0.3.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
