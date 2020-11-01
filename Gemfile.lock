@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:coditsu/support-engine.git
+  remote: https://github.com/coditsu/support-engine.git
   revision: c31dc87bd7e33ae3a1284e42088fa4b9ac3240b2
   specs:
     support_engine (0.1.4)
