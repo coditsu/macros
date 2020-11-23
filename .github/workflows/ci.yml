@@ -4,9 +4,6 @@ jobs:
   specs:
     runs-on: ubuntu-latest
 
-    env:
-      GITHUB_API_TOKEN: ${{ secrets.CI_GITHUB_API_TOKEN }}
-
     strategy:
       fail-fast: false
       matrix:
