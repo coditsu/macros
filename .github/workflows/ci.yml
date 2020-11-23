@@ -6,6 +6,7 @@ jobs:
 
     env:
       GITHUB_TOKEN: ${{ secrets.CI_GITHUB_API_TOKEN }}
+      BUNDLE_GITHUB__COM: x-access-token:${{ secrets.CI_GITHUB_API_TOKEN }}
 
     strategy:
       fail-fast: false
@@ -37,8 +38,8 @@ jobs:
         env:
           DIFFEND_DEVELOPMENT: true
         run: |
-          bundle config GITHUB__COM x-access-token:${{ secrets.CI_GITHUB_API_TOKEN }}
           bundle config path vendor/bundle
+          bundle config
           bundle install --jobs 4 --retry 3
       - name: Run all tests
         env:
