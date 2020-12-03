@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 18f1f21b51d2c701f9f4bea192edf4f6a0454f36
+  revision: 11313b66f6ec41a4f57487dc6270c2858d787ff3
   specs:
     support_engine (0.1.4)
       activesupport
@@ -63,10 +63,12 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.0)
-    simplecov (0.19.1)
+    simplecov (0.20.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.2)
     thread_safe (0.3.6)
     trailblazer (2.1.0)
       trailblazer-macro (>= 2.1.0, < 2.2.0)
@@ -74,7 +76,7 @@ GEM
       trailblazer-operation
     trailblazer-activity (0.11.3)
       trailblazer-context (>= 0.3.1, < 0.4.0)
-    trailblazer-activity-dsl-linear (0.3.3)
+    trailblazer-activity-dsl-linear (0.3.4)
       trailblazer-activity (>= 0.11.3, < 1.0.0)
     trailblazer-context (0.3.1)
       hashie (~> 4.1)
@@ -96,7 +98,7 @@ GEM
     tzinfo (1.2.8)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    zeitwerk (2.4.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
