@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: b98a3befd8a166d3552b5dc267a6bb3bdbe2b597
+  revision: ffac314ac84ed6552b6bae423dfcc454fff58d39
   specs:
     support_engine (0.1.4)
       activesupport
@@ -63,7 +63,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.1)
-    simplecov (0.21.0)
+    simplecov (0.21.1)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
