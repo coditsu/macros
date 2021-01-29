@@ -59,10 +59,10 @@ GEM
     rspec-expectations (3.10.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.1)
+    rspec-mocks (3.10.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-support (3.10.1)
+    rspec-support (3.10.2)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -90,7 +90,7 @@ GEM
       trailblazer-operation (>= 0.6.5)
     trailblazer-macro-contract (2.1.0)
       reform (>= 2.2.0, < 3.0.0)
-    trailblazer-operation (0.6.5)
+    trailblazer-operation (0.6.6)
       trailblazer-activity (>= 0.11.2, < 1.0.0)
       trailblazer-activity-dsl-linear (>= 0.3.2, < 1.0.0)
       trailblazer-developer (>= 0.0.8)
@@ -110,4 +110,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.2.6
+   2.2.7
