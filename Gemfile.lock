@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 34c315957fe3ac12ee1156c89a35aa1088db7479
+  revision: 788bf0c46d2bd0af95ecc33cff53aa2bb1e81a08
   specs:
     support_engine (0.1.4)
       activesupport
@@ -17,7 +17,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.2)
+    activesupport (6.1.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
