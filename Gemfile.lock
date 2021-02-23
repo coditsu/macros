@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: df5a10a0c8b56348803f6686d4c52c2a227b6652
+  revision: cab8c46700db2708c6b38cbf37dbdc7fb9356f70
   specs:
     support_engine (0.1.4)
       activesupport
@@ -100,6 +100,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
