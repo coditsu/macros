@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: faf1e79ddb5d8a2baf135183d2cf7de5ed7a27a7
+  revision: fe0a949a1887bb568f2dad13317e036aafe62f4e
   specs:
     support_engine (0.1.4)
       activesupport
@@ -13,6 +13,7 @@ PATH
       activesupport
       require_all
       trailblazer
+      trailblazer-developer
 
 GEM
   remote: https://rubygems.org/
@@ -73,27 +74,25 @@ GEM
       trailblazer-macro (>= 2.1.0, < 2.2.0)
       trailblazer-macro-contract (>= 2.1.0, < 2.2.0)
       trailblazer-operation
-    trailblazer-activity (0.11.5)
-      trailblazer-context (>= 0.3.1, < 0.4.0)
-    trailblazer-activity-dsl-linear (0.3.5)
-      trailblazer-activity (>= 0.11.3, < 1.0.0)
-    trailblazer-context (0.3.3)
+    trailblazer-activity (0.12.0)
+      trailblazer-context (>= 0.4.0, < 0.5.0)
+    trailblazer-activity-dsl-linear (0.4.0)
+      trailblazer-activity (>= 0.12.0, < 1.0.0)
+    trailblazer-context (0.4.0)
       hashie (>= 3.0.0)
     trailblazer-developer (0.0.21)
       hirb
       representable
       trailblazer-activity (>= 0.11.0, < 1.0.0)
       trailblazer-activity-dsl-linear
-    trailblazer-macro (2.1.4)
-      trailblazer-activity (>= 0.11.2, < 1.0.0)
-      trailblazer-activity-dsl-linear (>= 0.3.3, < 1.0.0)
-      trailblazer-operation (>= 0.6.5)
-    trailblazer-macro-contract (2.1.0)
+    trailblazer-macro (2.1.5)
+      trailblazer-activity-dsl-linear (>= 0.4.0, < 0.5.0)
+      trailblazer-operation (>= 0.7.0)
+    trailblazer-macro-contract (2.1.1)
       reform (>= 2.2.0, < 3.0.0)
-    trailblazer-operation (0.6.6)
-      trailblazer-activity (>= 0.11.2, < 1.0.0)
-      trailblazer-activity-dsl-linear (>= 0.3.2, < 1.0.0)
-      trailblazer-developer (>= 0.0.8)
+      trailblazer-activity-dsl-linear (>= 0.4.0, < 0.5.0)
+    trailblazer-operation (0.7.1)
+      trailblazer-activity-dsl-linear (>= 0.4.0, < 1.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
@@ -110,4 +109,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.2.12
+   2.2.13
