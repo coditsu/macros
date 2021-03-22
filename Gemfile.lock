@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: fe0a949a1887bb568f2dad13317e036aafe62f4e
+  revision: 0415907bf33c8dac9a0a756f73476d742bc9224b
   specs:
     support_engine (0.1.4)
       activesupport
@@ -74,7 +74,7 @@ GEM
       trailblazer-macro (>= 2.1.0, < 2.2.0)
       trailblazer-macro-contract (>= 2.1.0, < 2.2.0)
       trailblazer-operation
-    trailblazer-activity (0.12.0)
+    trailblazer-activity (0.12.1)
       trailblazer-context (>= 0.4.0, < 0.5.0)
     trailblazer-activity-dsl-linear (0.4.0)
       trailblazer-activity (>= 0.12.0, < 1.0.0)
@@ -85,14 +85,16 @@ GEM
       representable
       trailblazer-activity (>= 0.11.0, < 1.0.0)
       trailblazer-activity-dsl-linear
-    trailblazer-macro (2.1.5)
+    trailblazer-macro (2.1.6)
       trailblazer-activity-dsl-linear (>= 0.4.0, < 0.5.0)
       trailblazer-operation (>= 0.7.0)
     trailblazer-macro-contract (2.1.1)
       reform (>= 2.2.0, < 3.0.0)
       trailblazer-activity-dsl-linear (>= 0.4.0, < 0.5.0)
-    trailblazer-operation (0.7.1)
+    trailblazer-operation (0.7.4)
+      trailblazer-activity (>= 0.12.1, < 1.0.0)
       trailblazer-activity-dsl-linear (>= 0.4.0, < 1.0.0)
+      trailblazer-developer (>= 0.0.21, < 1.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
@@ -109,4 +111,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.2.13
+   2.2.15
