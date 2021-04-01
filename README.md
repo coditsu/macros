@@ -1,6 +1,6 @@
 # Trailblazer Coditsu Macros Engine
 
-[![CircleCI](https://circleci.com/gh/coditsu/macros/tree/master.svg?style=svg)](https://circleci.com/gh/coditsu/macros/tree/master)
+[![Build Status](https://github.com/coditsu/macros/actions/workflows/ci.yml/badge.svg)](https://github.com/coditsu/macros/actions/workflows/ci.yml)
 
 Set of macros for nicer composition of Trailblazer operations.
 
