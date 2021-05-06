@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 486efc92a25dc8cde562d8c6665ef0570b61bd88
+  revision: b2b3a99e8350b0cbb60b05a08c83a67290b44abe
   specs:
     support_engine (0.1.4)
       activesupport
@@ -18,7 +18,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.3.1)
+    activesupport (6.1.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -67,7 +67,7 @@ GEM
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
-    simplecov_json_formatter (0.1.2)
+    simplecov_json_formatter (0.1.3)
     trailblazer (2.1.0)
       trailblazer-macro (>= 2.1.0, < 2.2.0)
       trailblazer-macro-contract (>= 2.1.0, < 2.2.0)
@@ -110,4 +110,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.2.16
+   2.2.17
