@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: ba8f9710a8aa6995ec07feb31cb2dc5f4c302ab9
+  revision: 3070f78cf5c327b274eba1c17ca9d5ecaf73e3dd
   specs:
     support_engine (0.1.4)
       activesupport
@@ -24,7 +24,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     declarative (0.0.20)
     declarative-builder (0.2.0)
       trailblazer-option (~> 0.1.0)
@@ -100,8 +100,6 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin
-  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
