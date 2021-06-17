@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: fd46e2f82020e47fc15305b2db3319e7be9ee852
+  revision: 916d4cb99cb66c5144a72695a9544981a8a96dbb
   specs:
     support_engine (0.1.4)
       activesupport
@@ -72,11 +72,12 @@ GEM
       trailblazer-macro (>= 2.1.0, < 2.2.0)
       trailblazer-macro-contract (>= 2.1.0, < 2.2.0)
       trailblazer-operation
-    trailblazer-activity (0.12.1)
-      trailblazer-context (>= 0.4.0, < 0.5.0)
+    trailblazer-activity (0.12.2)
+      trailblazer-context (~> 0.5.0)
+      trailblazer-option (~> 0.1.0)
     trailblazer-activity-dsl-linear (0.4.0)
       trailblazer-activity (>= 0.12.0, < 1.0.0)
-    trailblazer-context (0.4.0)
+    trailblazer-context (0.5.0)
       hashie (>= 3.0.0)
     trailblazer-developer (0.0.21)
       hirb
@@ -112,4 +113,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.2.19
+   2.2.20
