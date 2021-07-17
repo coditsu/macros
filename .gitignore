@@ -20,3 +20,4 @@
 /coverage
 /.yard
 .coditsu/local.yml
+vendor/bundle
