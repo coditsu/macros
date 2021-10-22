@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 77f74eb1a2485687f9a839599113ea52e31cdddc
+  revision: 2d3091352835cd41867c5ad6059bd5e412dba38e
   specs:
     support_engine (0.1.4)
       activesupport
@@ -98,7 +98,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    zeitwerk (2.5.0)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   x86_64-darwin
