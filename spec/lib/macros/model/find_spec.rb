@@ -22,7 +22,7 @@ RSpec.describe_current do
 
     it 'expect to use default for querying and assignment' do
       expect(scope).to receive(:find).with(search_value).and_return(found_instance)
-      query_step.call(ctx, params)
+      query_step.call(ctx, **params)
       expect(ctx['model']).to eq found_instance
     end
   end
@@ -35,7 +35,7 @@ RSpec.describe_current do
 
     it 'expect to assign under custom name' do
       expect(scope).to receive(:find).with(search_value).and_return(found_instance)
-      query_step.call(ctx, params)
+      query_step.call(ctx, **params)
       expect(ctx[name]).to eq found_instance
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe_current do
 
     it 'expect to use custom query method' do
       expect(scope).to receive(:find_by).with(id: search_value).and_return(found_instance)
-      query_step.call(ctx, params)
+      query_step.call(ctx, **params)
       expect(ctx['model']).to eq found_instance
     end
   end
@@ -61,7 +61,7 @@ RSpec.describe_current do
 
     it 'expect to use custom search key' do
       expect(scope).to receive(:find).with(search_value).and_return(found_instance)
-      query_step.call(ctx, params)
+      query_step.call(ctx, **params)
       expect(ctx['model']).to eq found_instance
     end
   end
@@ -74,7 +74,7 @@ RSpec.describe_current do
 
     it 'expect to use custom search key' do
       expect(scope).to receive(:find).with(search_value).and_return(found_instance)
-      query_step.call(ctx, params)
+      query_step.call(ctx, **params)
       expect(ctx['model']).to eq found_instance
     end
   end
