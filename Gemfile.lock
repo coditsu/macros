@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 04595875ff146f377ea1e326954952fcd0aa0395
+  revision: ea06a46d37d3d9d9fa298c244fcfbae5a2ab1cfe
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -24,6 +24,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    byebug (11.1.3)
     concurrent-ruby (1.1.9)
     declarative (0.0.20)
     diff-lcs (1.5.0)
@@ -103,10 +104,11 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  byebug
   macros!
   rspec
   simplecov
   support_engine!
 
 BUNDLED WITH
-   2.3.4
+   2.3.5
