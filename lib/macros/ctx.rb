@@ -2,7 +2,5 @@
 
 module Macros
   # Macros for available shared steps related to ctx object
-  class Ctx < Base
-    register :assign
-  end
+  class Ctx < Base; end
 end
