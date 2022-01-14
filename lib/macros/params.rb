@@ -2,8 +2,5 @@
 
 module Macros
   # Macros for available shared steps related to params
-  class Params < Base
-    register :fetch
-    register :remap
-  end
+  class Params < Base; end
 end
