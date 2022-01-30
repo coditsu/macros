@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 23ca562b5f722fefc8827afa4ff6e8da9d3b661e
+  revision: a7303b6bd56dab8212bf7a5b2e2f1992cbd7aace
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -34,7 +34,7 @@ GEM
     docile (1.4.0)
     hashie (5.0.0)
     hirb (0.7.3)
-    i18n (1.9.0)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     minitest (5.15.0)
     reform (2.6.1)
@@ -50,12 +50,12 @@ GEM
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
       rspec-mocks (~> 3.10.0)
-    rspec-core (3.10.1)
+    rspec-core (3.10.2)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.2)
+    rspec-mocks (3.10.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.3)
@@ -95,7 +95,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    zeitwerk (2.5.3)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   x86_64-darwin
