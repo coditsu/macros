@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: a7303b6bd56dab8212bf7a5b2e2f1992cbd7aace
+  revision: 4c090fdacdc33f3e38ac9c05214f3b9f53c85a81
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -18,7 +18,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4.4)
+    activesupport (6.1.4.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -46,19 +46,19 @@ GEM
       trailblazer-option (>= 0.1.1, < 0.2.0)
       uber (< 0.2.0)
     require_all (3.0.0)
-    rspec (3.10.0)
-      rspec-core (~> 3.10.0)
-      rspec-expectations (~> 3.10.0)
-      rspec-mocks (~> 3.10.0)
-    rspec-core (3.10.2)
-      rspec-support (~> 3.10.0)
-    rspec-expectations (3.10.2)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.3)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.10.0)
-    rspec-support (3.10.3)
+      rspec-support (~> 3.11.0)
+    rspec-support (3.11.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -111,4 +111,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.3.6
+   2.3.7
