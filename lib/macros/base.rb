@@ -6,8 +6,9 @@ module Macros
     include Uber::Callable
 
     # @param args Any arguments that our macro operation supports
+    #
     # @return Single step object that can be used in operation step
-    def initialize(*args)
+    def initialize(args)
       self.args = args
     end
 
