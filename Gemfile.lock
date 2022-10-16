@@ -75,7 +75,7 @@ GEM
     trailblazer-activity-dsl-linear (1.0.0)
       trailblazer-activity (>= 0.14.0, < 0.15.0)
       trailblazer-declarative (>= 0.0.1, < 0.1.0)
-    trailblazer-context (0.5.0)
+    trailblazer-context (0.5.1)
       hashie (>= 3.0.0)
     trailblazer-declarative (0.0.2)
     trailblazer-developer (0.0.26)
