@@ -15,8 +15,8 @@ RSpec.describe_current do
   let(:sorts) { [] }
 
   before do
-    allow(klass).to receive(:search).with(current_search).and_return(search)
     paginate_step.call(ctx, current_search: current_search)
+    allow(klass).to receive(:ransack).with(current_search).and_return(search)
   end
 
   context 'when we want to search model' do
