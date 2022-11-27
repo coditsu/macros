@@ -3,7 +3,7 @@
 RSpec.describe_current do
   let(:klass) do
     Class.new do
-      def self.search(_current_search); end
+      def self.ransack(_current_search); end
 
       self
     end
