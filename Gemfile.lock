@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: b25400aae5ff9a5aaebc5a63f92ef22701ed5dd5
+  revision: 2bede4e8756332c28457575a761f65955e8dc217
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -52,7 +52,7 @@ GEM
       rspec-mocks (~> 3.12.0)
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.0)
+    rspec-expectations (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-mocks (3.12.1)
@@ -81,7 +81,7 @@ GEM
     trailblazer-developer (0.0.27)
       hirb
       trailblazer-activity-dsl-linear (>= 1.1.0, < 1.2.0)
-    trailblazer-macro (2.1.12)
+    trailblazer-macro (2.1.13)
       trailblazer-activity-dsl-linear (>= 1.1.0, < 1.2.0)
       trailblazer-operation (>= 0.9.0)
     trailblazer-macro-contract (2.1.4)
