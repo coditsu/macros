@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: f2ead3d0e50c85ddc4416ef406be490f68df61db
+  revision: beb0ae98e28f000764bb59465541bb553e35a4a2
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -91,7 +91,7 @@ GEM
       trailblazer-activity-dsl-linear (>= 1.1.0, < 1.2.0)
       trailblazer-developer (>= 0.0.26)
     trailblazer-option (0.1.2)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     zeitwerk (2.6.6)
