@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: b20da256d9d00be10524b443ab9393b2c62056ed
+  revision: ab76adf3a63dc90058ff22a91632ffe939f91296
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -34,7 +34,7 @@ GEM
     docile (1.4.0)
     hashie (5.0.0)
     hirb (0.7.3)
-    i18n (1.13.0)
+    i18n (1.14.0)
       concurrent-ruby (~> 1.0)
     minitest (5.18.0)
     reform (2.6.2)
