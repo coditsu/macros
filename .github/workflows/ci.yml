@@ -4,9 +4,14 @@ jobs:
   specs:
     needs: diffend
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
+      matrix:
+        ruby:
+          - '3.3'
+        include:
+          - ruby: '3.3'
+            coverage: 'true'
 
     steps:
       - uses: actions/checkout@v4
@@ -15,7 +20,7 @@ jobs:
           bundler-cache: true
       - name: Run all tests
         env:
-          GITHUB_COVERAGE: true
+          GITHUB_COVERAGE: ${{matrix.coverage}}
         run: |
           git config --global user.email "ci@coditsu.io"
           git config --global user.name "Coditsu CI"
@@ -32,7 +37,9 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: 3.3
+      - name: Install latest bundler
+        run: gem install bundler --no-document
       - name: Install Diffend plugin
         run: bundle plugin install diffend
       - name: Bundle Secure
