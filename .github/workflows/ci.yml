@@ -20,7 +20,7 @@ jobs:
           bundler-cache: true
       - name: Run all tests
         env:
-          GITHUB_COVERAGE: true
+          GITHUB_COVERAGE: ${{matrix.coverage}}
         run: |
           git config --global user.email "ci@coditsu.io"
           git config --global user.name "Coditsu CI"
