@@ -4,7 +4,6 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 %w[
-  byebug
   rubygems
   simplecov
   support_engine/rspec_locator
