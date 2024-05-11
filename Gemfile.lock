@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 0144c9fbda83a6ddff9404b676c84c59ef15ea77
+  revision: 1334dea00e2a9d36caee37d2d6864cde827ff25a
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -36,10 +36,10 @@ GEM
     docile (1.4.0)
     hashie (5.0.0)
     hirb (0.7.3)
-    i18n (1.14.4)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
-    irb (1.13.0)
+    irb (1.13.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     minitest (5.22.3)
@@ -51,7 +51,7 @@ GEM
       disposable (>= 0.5.0, < 1.0.0)
       representable (>= 3.1.1, < 4)
       uber (< 0.2.0)
-    reline (0.5.5)
+    reline (0.5.6)
       io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -67,7 +67,7 @@ GEM
     rspec-expectations (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.0)
+    rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.1)
@@ -125,4 +125,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.5.9
+   2.5.10
