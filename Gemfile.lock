@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 1334dea00e2a9d36caee37d2d6864cde827ff25a
+  revision: fe5822dd1b8a2ee8cbaf3d5951fea90fb0379638
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -42,16 +42,16 @@ GEM
     irb (1.13.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    minitest (5.22.3)
+    minitest (5.23.1)
     psych (5.1.2)
       stringio
-    rdoc (6.6.3.1)
+    rdoc (6.7.0)
       psych (>= 4.0.0)
     reform (2.6.2)
       disposable (>= 0.5.0, < 1.0.0)
       representable (>= 3.1.1, < 4)
       uber (< 0.2.0)
-    reline (0.5.6)
+    reline (0.5.7)
       io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -109,7 +109,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    zeitwerk (2.6.13)
+    zeitwerk (2.6.14)
 
 PLATFORMS
   arm64-darwin
