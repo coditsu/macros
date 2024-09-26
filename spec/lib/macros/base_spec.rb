@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe_current do
-  subject(:container) { described_class.new(*args) }
+  subject(:container) { described_class.new(args) }
 
-  let(:args) { [{ rand => rand }] }
+  let(:args) { { key: :value } }
 
   describe '.new' do
     it 'expect to store arguments' do
