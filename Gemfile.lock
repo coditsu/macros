@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: 4d5578d69ab724c1f6d41aac9ca55aadb5fe7eab
+  revision: a9c6a29be265929c6528f53a5ecde1be2dc70beb
   specs:
     support_engine (0.1.4)
       activesupport (< 7)
@@ -84,7 +84,7 @@ GEM
       trailblazer-macro (>= 2.1.15, < 2.2.0)
       trailblazer-macro-contract (>= 2.1.4, < 2.2.0)
       trailblazer-operation (>= 0.9.0, < 1.0.0)
-    trailblazer-activity (0.16.2)
+    trailblazer-activity (0.16.3)
       trailblazer-context (~> 0.5.0)
       trailblazer-option (~> 0.1.0)
     trailblazer-activity-dsl-linear (1.2.5)
@@ -109,7 +109,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
-    zeitwerk (2.6.18)
+    zeitwerk (2.7.0)
 
 PLATFORMS
   arm64-darwin
@@ -125,4 +125,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.5.20
+   2.5.21
