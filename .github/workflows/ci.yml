@@ -4,39 +4,20 @@ jobs:
   specs:
     needs: diffend
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
       matrix:
         ruby:
-          - '3.1'
+          - '3.3'
         include:
-          - ruby: '3.1'
+          - ruby: '3.3'
             coverage: 'true'
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - name: Install package dependencies
-        run: "[ -e $APT_DEPS ] || sudo apt-get install -y --no-install-recommends $APT_DEPS"
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{matrix.ruby}}
-      - name: Install latest bundler
-        run: |
-          gem install bundler --no-document
-      - name: Bundle install
-        env:
-          DIFFEND_DEVELOPMENT: true
-        run: |
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
+          bundler-cache: true
       - name: Run all tests
         env:
           GITHUB_COVERAGE: ${{matrix.coverage}}
@@ -50,13 +31,13 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.3
       - name: Install latest bundler
         run: gem install bundler --no-document
       - name: Install Diffend plugin
@@ -69,7 +50,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Run Coditsu
