@@ -8,7 +8,7 @@ module Macros
     class Persist < Base
       # Build and return persistance contract step
       def call
-        Trailblazer::Operation::Contract::Persist(*args)
+        Trailblazer::Operation::Contract::Persist(**args)
       end
     end
   end
