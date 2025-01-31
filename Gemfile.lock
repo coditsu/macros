@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/coditsu/support-engine.git
-  revision: b8a955fafc5c890562b756d9217b495fdb3b8f90
+  revision: cf14fb6a4a8c788f25acbf5860fec59b0420a73f
   specs:
     support_engine (0.1.4)
-      activesupport (< 7)
+      activesupport (< 8)
+      logger
       zeitwerk
 
 PATH
@@ -18,13 +19,23 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.7.10)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activesupport (7.2.2.1)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
-    concurrent-ruby (1.3.4)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+    base64 (0.2.0)
+    benchmark (0.4.0)
+    bigdecimal (3.1.9)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.0)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -35,19 +46,25 @@ GEM
       declarative (>= 0.0.9, < 1.0.0)
       representable (>= 3.1.1, < 4)
     docile (1.4.1)
+    drb (2.2.1)
     hashie (5.0.0)
     hirb (0.7.3)
-    i18n (1.14.6)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
-    irb (1.14.3)
+    irb (1.15.1)
+      pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    logger (1.6.5)
     minitest (5.25.4)
-    psych (5.2.2)
+    pp (0.6.2)
+      prettyprint
+    prettyprint (0.2.0)
+    psych (5.2.3)
       date
       stringio
-    rdoc (6.10.0)
+    rdoc (6.11.0)
       psych (>= 4.0.0)
     reform (2.6.2)
       disposable (>= 0.5.0, < 1.0.0)
@@ -73,6 +90,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
+    securerandom (0.4.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -127,4 +145,4 @@ DEPENDENCIES
   support_engine!
 
 BUNDLED WITH
-   2.6.1
+   2.6.3
