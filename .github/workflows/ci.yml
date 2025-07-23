@@ -1,3 +1,4 @@
+---
 name: ci
 
 jobs:
@@ -8,9 +9,9 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-          - '3.3'
+          - '3.4'
         include:
-          - ruby: '3.3'
+          - ruby: '3.4'
             coverage: 'true'
 
     steps:
@@ -37,7 +38,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          ruby-version: 3.4
       - name: Install latest bundler
         run: gem install bundler --no-document
       - name: Install Diffend plugin
