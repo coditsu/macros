@@ -8,7 +8,7 @@ module Macros
     class Build < Base
       # Builds a contract step
       def call
-        Trailblazer::Operation::Contract::Build(*args)
+        Trailblazer::Operation::Contract::Build(**args)
       end
     end
   end

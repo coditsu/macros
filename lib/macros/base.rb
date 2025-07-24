@@ -5,9 +5,10 @@ module Macros
   class Base
     include Uber::Callable
 
-    # @param args Any arguments that our macro operation supports
+    # @param args [Hash] Any arguments that our macro operation supports
+    #
     # @return Single step object that can be used in operation step
-    def initialize(*args)
+    def initialize(args = {})
       self.args = args
     end
 
