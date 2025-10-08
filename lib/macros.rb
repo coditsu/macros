@@ -20,4 +20,4 @@ module Macros
   end
 end
 
-require_all File.dirname(__FILE__) + '/**/*.rb'
+require_all "#{File.dirname(__FILE__)}/**/*.rb"
