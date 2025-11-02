@@ -14,6 +14,9 @@ module Macros
 
     private
 
+    # Normalize different error formats to a hash
+    # @param errors [Hash, ActiveModel::Errors, Array, Object] errors to normalize
+    # @return [Hash] normalized errors hash
     def normalize_errors(errors)
       case errors
       when Hash
@@ -27,6 +30,8 @@ module Macros
       end
     end
 
+    # Generate error message from errors hash
+    # @return [String] formatted error message
     def error_message
       if @errors.is_a?(Hash)
         messages = @errors.flat_map do |key, values|

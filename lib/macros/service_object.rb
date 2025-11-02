@@ -21,11 +21,14 @@ module Macros
   #     result.errors
   #   end
   module ServiceObject
+    # Hook called when module is included
+    # @param base [Class] the class including this module
     def self.included(base)
       base.extend ClassMethods
       base.include InstanceMethods
     end
 
+    # Class methods added to service objects
     module ClassMethods
       # Call the service object
       # @param params [Hash] parameters for the service
@@ -36,6 +39,7 @@ module Macros
       end
     end
 
+    # Instance methods added to service objects
     module InstanceMethods
       # Main entry point for service objects
       # @param params [Hash] parameters for the service
@@ -74,8 +78,8 @@ module Macros
       end
 
       # Override this method to implement business logic
-      # @raise [NotImplementedError] if not overridden
       # @return [Result] result object
+      # @raise [NotImplementedError] if not overridden
       def run
         raise NotImplementedError, "#{self.class} must implement #run"
       end
@@ -86,16 +90,14 @@ module Macros
       # @return [Result] result object with error
       def handle_error(error)
         # Re-raise in test environments
-        if !defined?(Rails) || Rails.env.test? || Rails.env.development?
-          raise error
-        else
-          # Log error in production
-          if defined?(Rails)
-            Rails.logger.error("Service object error: #{error.class} - #{error.message}")
-            Rails.logger.error(error.backtrace.join("\n"))
-          end
-          failure(errors: { base: ['An unexpected error occurred'] })
+        raise error if !defined?(Rails) || Rails.env.test? || Rails.env.development?
+
+        # Log error in production
+        if defined?(Rails)
+          Rails.logger.error("Service object error: #{error.class} - #{error.message}")
+          Rails.logger.error(error.backtrace.join("\n"))
         end
+        failure(errors: { base: ['An unexpected error occurred'] })
       end
     end
   end

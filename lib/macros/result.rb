@@ -65,6 +65,8 @@ module Macros
     private
 
     # Normalize different error formats to a hash
+    # @param errors [Hash, ActiveModel::Errors, Array, Object] errors to normalize
+    # @return [Hash] normalized errors hash
     def normalize_errors(errors)
       case errors
       when Hash

@@ -163,8 +163,8 @@ RSpec.describe Macros::FormObject do
 
   describe '#save!' do
     it 'saves without validation' do
-      form.name = ''  # Invalid
-      form.email = 'invalid'  # Invalid
+      form.name = '' # Invalid
+      form.email = 'invalid' # Invalid
       expect(form.save!).to be true
       expect(model).to be_persisted
     end

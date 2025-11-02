@@ -8,8 +8,8 @@ RSpec.describe Macros::ValidationError do
     end
 
     it 'stores array errors' do
-      error = described_class.new(['error1', 'error2'])
-      expect(error.errors).to eq(base: ['error1', 'error2'])
+      error = described_class.new(%w[error1 error2])
+      expect(error.errors).to eq(base: %w[error1 error2])
     end
 
     it 'converts string to hash' do

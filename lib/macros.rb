@@ -46,6 +46,9 @@ rescue LoadError
   @legacy_macros_loaded = false
 end
 
+# Check if legacy Trailblazer-based macros were loaded
+#
+# @return [Boolean] true if Trailblazer is available and legacy macros were loaded
 def self.legacy_macros_loaded?
   @legacy_macros_loaded || false
 end

@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
   spec.description   = 'Lightweight service object framework with form objects (Trailblazer-free)'
   spec.license       = 'LGPL-3.0'
 
-  spec.add_dependency 'activesupport'
   spec.add_dependency 'activemodel'
+  spec.add_dependency 'activesupport'
   spec.add_dependency 'require_all'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }

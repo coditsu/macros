@@ -70,9 +70,9 @@ RSpec.describe Macros::ServiceObject do
     end
 
     it 'handles unexpected errors in test environment' do
-      expect {
+      expect do
         error_service.call(params: {}, context: {})
-      }.to raise_error(StandardError, 'Unexpected error')
+      end.to raise_error(StandardError, 'Unexpected error')
     end
   end
 
@@ -82,9 +82,9 @@ RSpec.describe Macros::ServiceObject do
         include Macros::ServiceObject
       end
 
-      expect {
+      expect do
         base_service.call(params: {}, context: {})
-      }.to raise_error(NotImplementedError, /must implement #run/)
+      end.to raise_error(NotImplementedError, /must implement #run/)
     end
   end
 
