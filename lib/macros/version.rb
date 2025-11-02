@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Macros
-  # Current Macros version
-  VERSION = '1.15.0'
+  # Current gem version
+  # Version 2.0.0 - Major refactor to remove Trailblazer dependency
+  VERSION = '2.0.0'
 end
