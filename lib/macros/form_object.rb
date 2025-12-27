@@ -129,9 +129,19 @@ module Macros
     end
 
     # Copy model validation errors to form errors
+    # Compatible with both Rails 6 and Rails 7+ error formats
     def copy_model_errors
-      model.errors.each do |error|
-        @errors.add(error.attribute, error.message) unless @errors.added?(error.attribute, error.message)
+      model.errors.each do |*args|
+        if args.length == 2
+          # Rails 6.x format: yields (attribute, message)
+          attribute, message = args
+        else
+          # Rails 7+ format: yields ActiveModel::Error object
+          error = args.first
+          attribute = error.attribute
+          message = error.message
+        end
+        @errors.add(attribute, message) unless @errors.added?(attribute, message)
       end
     end
   end
