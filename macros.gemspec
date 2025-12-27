@@ -12,15 +12,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Maciej Mensfeld']
   spec.email         = %w[contact@coditsu.io]
   spec.homepage      = 'https://coditsu.io'
-  spec.summary       = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
-  spec.description   = 'Trailblazer shared macros for Coditsu Quality Assurance tool'
+  spec.summary       = 'Service object framework for Coditsu Quality Assurance tool'
+  spec.description   = 'Lightweight service object framework with form objects (Trailblazer-free)'
   spec.license       = 'LGPL-3.0'
 
+  spec.add_dependency 'activemodel'
   spec.add_dependency 'activesupport'
-  spec.add_dependency 'ostruct'
   spec.add_dependency 'require_all'
-  spec.add_dependency 'trailblazer'
-  spec.add_dependency 'trailblazer-developer'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
   spec.require_paths = %w[lib]
