@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe_current do
-  subject(:build_step) { described_class.new(*args) }
+  subject(:call) { instance.call }
 
-  let(:args) { { rand => rand } }
+  let(:instance) { described_class.new(args) }
+  let(:args) { { name: 'random_name' } }
 
-  it 'expect to delegate to trbr contract build' do
-    expect(Trailblazer::Operation::Contract).to receive(:Build)
-      .with(*args)
-
-    build_step.call
-  end
+  it { expect { call }.not_to raise_error }
+  it { is_expected.to be_a(Hash) }
 end

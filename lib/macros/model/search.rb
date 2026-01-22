@@ -26,7 +26,7 @@ module Macros
       # @param ctx [Trailblazer::Skill] trbr context hash
       # @param current_search [Hash] hash with ransack search details
       def call(ctx, current_search:, **)
-        search = ctx[@name].search(current_search)
+        search = ctx[@name].ransack(current_search)
         search.sorts = @default_sort_order if search.sorts.empty?
 
         ctx["#{@name}_search"] = search
